@@ -6,6 +6,7 @@ import online.yjyy.gmall0508.bean.BaseCatalog1;
 import online.yjyy.gmall0508.bean.BaseCatalog2;
 import online.yjyy.gmall0508.bean.BaseCatalog3;
 import online.yjyy.gmall0508.service.ManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,15 +17,13 @@ import java.util.List;
 @Controller
 public class ManageController {
 
-    @Reference
+    @Autowired
     private ManageService manageService;
     @RequestMapping("index")
     public String index(){
         // 表示返回一个试图 ， 新建一个试图
         return "index";
     }
-
-
     @RequestMapping("attrListPage")
     public String attrListPage(){
         return "attrListPage";

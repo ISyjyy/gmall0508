@@ -8,6 +8,7 @@ import online.yjyy.gmall0508.bean.SkuLsInfo;
 import online.yjyy.gmall0508.service.ListService;
 import online.yjyy.gmall0508.service.ManageService;
 import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +20,7 @@ import java.util.List;
 @Controller
 public class AttrManageController {
 
-    @Reference
+    @Autowired
     private ManageService manageService;
     @Reference
     private ListService listService;
@@ -41,8 +42,8 @@ public class AttrManageController {
         return baseAttrInfo.getAttrValueList();
     }
 
-    // 商品上架 根据商品id进行上架
-    // http://localhost:8082/onSale?skuId=33
+    // 商品上架 根据商品id进行上架  在skuManageController中 savesku方法中实现一边保存sku一边是上架商品
+    // http://localhost:8082/onSale.do?skuId=33
     @RequestMapping("onSale")
     @ResponseBody
     public String onSale(String skuId){

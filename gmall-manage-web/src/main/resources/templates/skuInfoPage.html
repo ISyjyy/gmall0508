@@ -72,7 +72,16 @@
         skuInfo["spuId"] = $("#spuIdForSku").val();
         skuInfo["id"] = $("#skuId").val();
         skuInfo["catalog3Id"] = $("#catalog3IdForSku").val();
-
+        /*$.ajax({
+            url:"onSale.do",
+            type:"post",
+            data:"skuId="+skuInfo.id,
+            dataType:"json",
+            success:function (data) {
+                // alert(data.result);
+                alert(data.result);
+            }
+        });*/
         // 开启dg 的编辑模式
         skuImgDgendEdit();
         //  List<SkuImage> skuImageList;
@@ -111,13 +120,12 @@
             skuInfo["skuSaleAttrValueList[" + i + "].saleAttrId"]=saleAttrId;
             skuInfo["skuSaleAttrValueList[" + i + "].saleAttrName"]=saleAttrName;
         }
-
         console.log(JSON.stringify(skuInfo));
 
 
         // 写控制器
         $.post("saveSku",skuInfo,function (data) {
-            // 关闭dialog
+            // 关闭dialo
             $("#sku_dlg").dialog('close');
         })
     }

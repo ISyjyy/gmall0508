@@ -5,6 +5,7 @@ import online.yjyy.gmall0508.bean.BaseSaleAttr;
 import online.yjyy.gmall0508.bean.SpuImage;
 import online.yjyy.gmall0508.bean.SpuInfo;
 import online.yjyy.gmall0508.service.ManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +18,7 @@ import java.util.Map;
 @Controller
 public class SpuManageController {
 
-    @Reference
+    @Autowired
     private ManageService manageService;
     @RequestMapping("spuListPage")
     public String spuListPage(){

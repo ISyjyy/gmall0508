@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSON;
 import online.yjyy.gmall0508.bean.*;
 import online.yjyy.gmall0508.service.ListService;
 import online.yjyy.gmall0508.service.ManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,7 +19,7 @@ import java.util.List;
 @Controller
 public class ListController {
 
-    @Reference
+    @Autowired
     private ListService listService;
     @Reference
     private ManageService manageService;

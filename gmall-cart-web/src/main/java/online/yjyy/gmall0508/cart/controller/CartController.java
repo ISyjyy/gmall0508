@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 public class CartController {
 
-    @Reference
+    @Autowired
     private CartService cartService;
 
     @Autowired

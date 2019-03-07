@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bcea77-f49e-4c7c-bcc9-90b1b4ba3a4c" name="Default" comment="商城基本功能完" />
+    <list default="true" id="07bcea77-f49e-4c7c-bcc9-90b1b4ba3a4c" name="Default" comment="商城基本功能完">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/_state/global-11.st" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/PaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-list-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-list-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-list-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.accordion(1).js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.accordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.combo(1).js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.combo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gware-manage/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gware-manage/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gware-manage/target/classes/online/yjyy/gware/mq/WareConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/gware-manage/target/classes/online/yjyy/gware/mq/WareConsumer.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/gmall-parent/target/" />
     <ignored path="$PROJECT_DIR$/gmall-bean/target/" />
     <ignored path="$PROJECT_DIR$/gmall-interface/target/" />
@@ -46,56 +76,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/service/impl/OrderServiceImpl.java">
+      <file leaf-file-name="ListController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="247" column="45" lean-forward="true" selection-start-line="247" selection-start-column="45" selection-end-line="247" selection-end-column="45" />
+            <state relative-caret-position="230">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/impl/ListServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManageServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/impl/ManageServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SkuManageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1012">
+              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttrManageController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#updateOrderStatus#0;class#OrderServiceImpl#0" />
-                <element signature="method#sendOrderStatus#0;class#OrderServiceImpl#0" />
-                <element signature="method#initWareOrder#0;class#OrderServiceImpl#0" />
+                <element signature="method#onSale#0;class#AttrManageController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java">
+      <file leaf-file-name="ListService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/ListService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3105">
-              <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/service/impl/PaymentServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2990">
-              <caret line="147" column="91" selection-start-line="147" selection-start-column="91" selection-end-line="147" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WareConsumer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/mq/WareConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GwareServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/service/impl/GwareServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4945">
-              <caret line="241" column="63" selection-start-line="241" selection-start-column="63" selection-end-line="241" selection-end-column="63" />
+            <state relative-caret-position="138">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -126,28 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/CartInfo.java" />
-        <option value="$PROJECT_DIR$/gmall-cart-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/resources/mapper/CartInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/java/online/yjyy/gmall0508/cart/mapper/CartInfoMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/java/online/yjyy/gmall0508/cart/GmallCartServiceApplication.java" />
-        <option value="$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/item.html" />
-        <option value="$PROJECT_DIR$/gmall-item-web/src/main/java/online/yjyy/gmall0508/item/controller/ItemController.java" />
-        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartCookieHandler.java" />
-        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/cartList.html" />
-        <option value="$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/enums/PaymentWay.java" />
-        <option value="$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/OrderInfo.java" />
-        <option value="$PROJECT_DIR$/gmall-order-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/mapper/OrderInfoMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/mapper/OrderDetailMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/GmallOrderServiceApplication.java" />
-        <option value="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" />
-        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/gware-manage/pom.xml" />
-        <option value="$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/bean/enums/PaymentStatus.java" />
         <option value="$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/bean/enums/PaymentWay.java" />
         <option value="$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/GwareManageApplication.java" />
         <option value="$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/CartService.java" />
@@ -175,8 +195,30 @@
         <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/task/OrderTask.java" />
         <option value="$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/config/AsyOrderConfig.java" />
-        <option value="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" />
         <option value="$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/service/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-list-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-list-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/GmallListWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java" />
+        <option value="$PROJECT_DIR$/gmall-list-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java" />
+        <option value="$PROJECT_DIR$/gmall-order-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/impl/OrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java" />
+        <option value="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/impl/ListServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java" />
       </list>
     </option>
   </component>
@@ -225,8 +267,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,11 +275,460 @@
               <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-item-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-item-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-item-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-item-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-item-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="list" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-list-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="list" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-order-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-passport-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-passport-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-passport-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-passport-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-passport-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="passport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-payment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-payment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="payment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-usermanage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-usermanage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-usermanage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-usermanage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-usermanage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="usermanage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="yjyy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="yjyy" type="462c0819:PsiDirectoryNode" />
+              <item name="gware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall0508" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall0508" type="462c0819:PsiDirectoryNode" />
+              <item name="gware-manage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,12 +755,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\gmall0508\gmall-manage-web\src\main\resources\static" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="online.yjyy.gmall0508.list.impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\gmall0508\gmall-order-service\src\main\java\online\yjyy\gmall0508\order\config" />
-      <recent name="E:\gmall0508\gmall-order-service\src\main\java\online\yjyy\gmall0508\order" />
-      <recent name="E:\gmall0508\gmall-payment\src\main\java\online\yjyy\gmall0508\payment\mq" />
-      <recent name="E:\gmall0508\gmall-payment\src\main\java\online\yjyy\gmall0508\payment" />
-      <recent name="E:\gmall0508\gmall-service-util\src\main\java\online\yjyy\gmall0508\config" />
+      <recent name="E:\gmall0508\gmall-cart-web\src\main\java\online\yjyy\gmall0508\cart" />
+      <recent name="E:\gmall0508\gmall-cart-web\src\main\resources" />
+      <recent name="E:\gmall0508\gmall-order-web\src\main\java\online\yjyy\gmall0508\order" />
+      <recent name="E:\gmall0508\gmall-manage-web\src\main\java\online\yjyy\gmall0508\manage" />
+      <recent name="E:\gmall0508\gmall-manage-web\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -285,7 +778,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GmallPaymentApplication">
+  <component name="RunManager" selected="Spring Boot.GmallManageWebApplication">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -420,7 +913,6 @@
     <configuration name="GmallPaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-payment" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="online.yjyy.gmall0508.payment.GmallPaymentApplication" />
-      <option name="VM_PARAMETERS" value="-server -XX:PermSize=128M -XX:MaxPermSize=256m" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration name="GmallUsermanageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -525,7 +1017,9 @@
       <workItem from="1551094525668" duration="6294000" />
       <workItem from="1551175820525" duration="10137000" />
       <workItem from="1551270662236" duration="5987000" />
-      <workItem from="1551783490576" duration="1358000" />
+      <workItem from="1551783490576" duration="3706000" />
+      <workItem from="1551866972260" duration="11798000" />
+      <workItem from="1551958749850" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="商城基本功能完成">
       <created>1551783548343</created>
@@ -546,7 +1040,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205080000" />
+    <option name="totallyTimeSpent" value="219836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -562,7 +1056,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.15206611" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.22087745" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -571,17 +1065,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37355372" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31900826" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3289256" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.061157025" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.21322314" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289256" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24508321" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2859304" />
       <window_info anchor="right" id="Bean Validation" order="3" weight="0.32980332" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -633,7 +1127,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -646,363 +1140,320 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/OrderInfo.java">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/constant/ManageConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="61" column="45" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="45" />
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-usermanage/src/main/java/online/yjyy/gmall0508/usermanage/GmallUsermanageApplication.java">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="23">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/ManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/online/yjyy/gmall0508/manage/service/impl/ManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="22" selection-start-line="22" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/GmallOrderServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/config/AsyOrderConfig.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/mapper/OrderDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/mq/OrderConsumer.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/task/OrderTask.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/mapper/OrderInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/resources/templates/list.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/java/online/yjyy/gmall0508/cart/GmallCartServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/mapper/CartInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/constant/CartConst.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/mapper/CartInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/impl/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-util/src/main/java/online/yjyy/gmall0508/config/AuthInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-usermanage/src/main/java/online/yjyy/gmall0508/usermanage/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="989">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/java/online/yjyy/gmall0508/passport/controller/PassportController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/PaymentInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/java/online/yjyy/gmall0508/cart/service/impl/CartServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3174">
-          <caret line="175" column="13" lean-forward="true" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/mapper/PaymentInfoMapper.java">
+    <entry file="file://$PROJECT_DIR$/gmall-item-web/src/main/java/online/yjyy/gmall0508/item/GmallItemWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/java/online/yjyy/gmall0508/cart/GmallCartServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-util/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/mq/ProducerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/mq/ConsumerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="27" column="55" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-util/src/main/java/online/yjyy/gmall0508/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-util/src/main/java/online/yjyy/gmall0508/config/RedisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/resources/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3708" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/resources/static/js/jquery-3.1.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/resources/alipay.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="62" lean-forward="true" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/毕设管理系统/电商项目资料/14 分布式事务资料/04 代码/gmall0508/gmall-interface/src/main/java/com/atguigu/gmall0508/service/CartService(1).java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/config/AlipayConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/4.3.14.RELEASE/spring-jms-4.3.14.RELEASE.jar!/org/springframework/jms/annotation/JmsListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-util/src/main/java/online/yjyy/gmall0508/config/ActiveMQConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-util/src/main/java/online/yjyy/gmall0508/config/ActiveMQUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar!/javax/jms/MapMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/service/GwareService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="28" column="40" lean-forward="true" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/service/impl/GwareServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4945">
-          <caret line="241" column="63" selection-start-line="241" selection-start-column="63" selection-end-line="241" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/enums/ProcessStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.5.2/mapper-3.5.2.jar!/tk/mybatis/mapper/common/example/UpdateByExampleSelectiveMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/alipay/alipay-sdk/3.0.0/alipay-sdk-3.0.0.jar!/com/alipay/api/request/AlipayTradeQueryRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/PaymentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/gware/mq/WareConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/mq/PaymentConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-43">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/controller/PaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="177" column="36" lean-forward="true" selection-start-line="177" selection-start-column="36" selection-end-line="177" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/config/AsyOrderConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/task/OrderTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/mq/OrderConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/service/impl/PaymentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2990">
-          <caret line="147" column="91" selection-start-line="147" selection-start-column="91" selection-end-line="147" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/GwareManageApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="54" lean-forward="true" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        <state relative-caret-position="161">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="138">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/java/online/yjyy/gmall0508/passport/GmallPassportWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-payment/src/main/java/online/yjyy/gmall0508/payment/GmallPaymentApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-usermanage/src/main/java/online/yjyy/gmall0508/usermanage/GmallUsermanageApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gware-manage/src/main/java/online/yjyy/GwareManageApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
+        <state relative-caret-position="93">
+          <caret line="95" column="7" lean-forward="true" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fastdfs-client-java/fastdfs-client.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-order-service/src/main/java/online/yjyy/gmall0508/order/service/impl/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="247" column="45" lean-forward="true" selection-start-line="247" selection-start-column="45" selection-end-line="247" selection-end-column="45" />
+        <state relative-caret-position="253">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-bean/src/main/java/online/yjyy/gmall0508/bean/SkuLsParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-503">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-interface/src/main/java/online/yjyy/gmall0508/service/ListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/impl/ManageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/GmallListWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/impl/ListServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/attrListPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/spuSaleAttrPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1242" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateOrderStatus#0;class#OrderServiceImpl#0" />
-            <element signature="method#sendOrderStatus#0;class#OrderServiceImpl#0" />
-            <element signature="method#initWareOrder#0;class#OrderServiceImpl#0" />
+            <element signature="method#onSale#0;class#AttrManageController#0" />
           </folding>
         </state>
       </provider>

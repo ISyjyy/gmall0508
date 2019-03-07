@@ -32,7 +32,7 @@ public class OrderController {
     @Reference
     private CartService cartService;
 
-    @Reference
+    @Autowired
     private OrderService orderService;
 
     @Reference
