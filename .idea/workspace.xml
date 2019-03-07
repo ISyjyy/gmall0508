@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bcea77-f49e-4c7c-bcc9-90b1b4ba3a4c" name="Default" comment="商城基本功能完">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="07bcea77-f49e-4c7c-bcc9-90b1b4ba3a4c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/_state/global-11.st" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/GmallCartWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/java/online/yjyy/gmall0508/cart/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/OrderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/PaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/online/yjyy/gmall0508/service/PaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-list-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-list-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/src/main/java/online/yjyy/gmall0508/list/controller/ListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-list-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-list-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/GmallManageWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/ManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SkuManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/SpuManageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.accordion(1).js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.accordion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.combo(1).js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/static/easyui/plugins/jquery.combo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/templates/skuInfoPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/Controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/java/online/yjyy/gmall0508/order/GmallOrderWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-order-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gware-manage/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gware-manage/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gware-manage/target/classes/online/yjyy/gware/mq/WareConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/gware-manage/target/classes/online/yjyy/gware/mq/WareConsumer.class" afterDir="false" />
     </list>
@@ -124,8 +100,8 @@
       <file leaf-file-name="AttrManageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
               <folding>
                 <element signature="method#onSale#0;class#AttrManageController#0" />
               </folding>
@@ -164,6 +140,7 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_COMMON_BRANCH" value="master" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -250,7 +227,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="178" />
     <option name="y" value="52" />
     <option name="width" value="1057" />
@@ -1019,7 +996,7 @@
       <workItem from="1551270662236" duration="5987000" />
       <workItem from="1551783490576" duration="3706000" />
       <workItem from="1551866972260" duration="11798000" />
-      <workItem from="1551958749850" duration="610000" />
+      <workItem from="1551958749850" duration="890000" />
     </task>
     <task id="LOCAL-00001" summary="商城基本功能完成">
       <created>1551783548343</created>
@@ -1028,7 +1005,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551783548343</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="商城基本功能">
+      <created>1551959952440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551959952440</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1040,7 +1024,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219836000" />
+    <option name="totallyTimeSpent" value="220116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1052,7 +1036,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -1123,7 +1107,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="商城基本功能完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="商城基本功能完成" />
+    <MESSAGE value="商城基本功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="商城基本功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1445,13 +1430,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/online/yjyy/gmall0508/manage/controller/AttrManageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
           <folding>
             <element signature="method#onSale#0;class#AttrManageController#0" />
           </folding>
