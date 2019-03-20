@@ -199,6 +199,11 @@ public class ListServiceImpl implements ListService {
         }
     }
 
+    @Override
+    public void deleteEsSkuInfo(String skuId) {
+
+    }
+
     private void updateHotScore(String skuId, long hotScore) {
         // dsl 语句 更新语句
         String query="{\n" +

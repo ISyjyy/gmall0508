@@ -2,17 +2,16 @@ package online.yjyy.gmall0508.list.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import io.searchbox.client.JestClient;
-import io.searchbox.core.Index;
-import io.searchbox.core.Search;
-import io.searchbox.core.SearchResult;
-import io.searchbox.core.Update;
+import io.searchbox.core.*;
 import io.searchbox.core.search.aggregation.MetricAggregation;
 import io.searchbox.core.search.aggregation.TermsAggregation;
 import online.yjyy.gmall0508.bean.SkuLsInfo;
 import online.yjyy.gmall0508.bean.SkuLsParams;
 import online.yjyy.gmall0508.bean.SkuLsResult;
 import online.yjyy.gmall0508.config.RedisUtil;
+
 import online.yjyy.gmall0508.service.ListService;
+import org.elasticsearch.index.engine.Engine;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -50,6 +49,16 @@ public class ListServiceImpl implements ListService {
         Index index = new Index.Builder(skuLsInfo).index(ES_INDEX).type(ES_TYPE).id(skuLsInfo.getId()).build();
         try {
             jestClient.execute(index);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @Override
+    public void deleteEsSkuInfo(String skuId) {
+        Delete.Builder builder = new Delete.Builder(skuId);
+        Delete delete = builder.index(ES_INDEX).type(ES_TYPE).id(skuId).build();
+        try {
+            jestClient.execute(delete);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -196,6 +205,7 @@ public class ListServiceImpl implements ListService {
             updateHotScore(skuId,  Math.round(score));
         }
     }
+
 
     private void updateHotScore(String skuId, long hotScore) {
         // dsl 语句 更新语句

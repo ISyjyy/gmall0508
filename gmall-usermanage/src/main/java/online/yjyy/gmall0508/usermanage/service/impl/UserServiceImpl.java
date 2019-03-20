@@ -86,4 +86,30 @@ public class UserServiceImpl implements UserService {
         }
         return null;
     }
+
+    @Override
+    public void addUserInfo(UserInfo userInfo) {
+         userMapper.insert(userInfo);
+    }
+
+    @Override
+    public UserInfo queryUserInfo(String loginName) {
+        UserInfo userInfo=new UserInfo();
+        userInfo.setLoginName(loginName);
+        return  userMapper.selectOne(userInfo);
+
+
+    }
+
+    @Override
+    public UserInfo queryUserInfoById(String userId) {
+        UserInfo userInfo = userMapper.selectByPrimaryKey(userId);
+        return userInfo;
+    }
+
+    @Override
+    public int updateUserInfo(UserInfo userInfo) {
+        return  userMapper.updateByPrimaryKey(userInfo);
+
+    }
 }

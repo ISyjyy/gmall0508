@@ -11,4 +11,6 @@ public interface ListService {
     SkuLsResult search(SkuLsParams skuLsParams);
     // 根据skuId 来更新商品的热度排名
     void incrHotScore(String skuId);
+
+    void deleteEsSkuInfo(String skuId);
 }

@@ -378,5 +378,29 @@ public class ManageServiceImpl implements ManageService {
         return baseAttrInfoList;
     }
 
+    @Override
+    public void deleteAttrInfo(String id) {
+
+    }
+
+    @Override
+    public void deleteSpuInfo(String id) {
+
+    }
+
+    @Override
+    public List getSkuInfoListBySpu(String spuId) {
+        return null;
+    }
+
+    @Override
+    public void deleteSkuInfoById(String skuId) {
+
+    }
+
+    public void deleteAttrInfo(BaseAttrInfo baseAttrInfo) {
+
+    }
+
 
 }

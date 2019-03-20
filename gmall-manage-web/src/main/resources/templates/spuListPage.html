@@ -33,7 +33,7 @@
         <div style="margin-bottom:5px">
             <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addSpuInfo()">添加</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editSpuInfo()">编辑</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteSpuInfo()">删除</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addSkuInfo()">增加sku</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="showSkuInfoList()"> sku列表</a>
         </div>
@@ -65,6 +65,8 @@
 <div th:include="spuInfoPage"></div>
 <!--引入skuInfoPage -->
 <div th:include="skuInfoPage"></div>
+<!--引入skuListPage -->
+<div th:include="skuListPage"></div>
 </body>
 <script type="text/javascript">
     //刷新列表页面
@@ -72,8 +74,14 @@
         var ctg3val=$("#ctg3ForSpuList").combobox('getValue');
         $('#spulist_dg').datagrid({url:'spuList?catalog3Id='+ctg3val});
     }
+    function deleteSpuInfo(){
+        alert("确定要删除么");
+        var spuRow = $('#spulist_dg').datagrid('getSelected');
+        $('#spulist_dg').datagrid({url:'deleteSpuInfo?id='+spuRow.id});
+            reloadSpuList();
+    }
     function addSpuInfo(){
-        initSpuInfoDlg();  //在spuInfoPage.html中
+        initSpuInfoDlg_add();  //在spuInfoPage.html中
     }
     function editSpuInfo()
     {   var spuInfo = $('#spulist_dg').datagrid('getSelected');
@@ -91,6 +99,17 @@
         var skuInfo = $('#skulist_dg').datagrid('getSelected');
         initSkuInfoDlg(spuId,skuInfo,catalog3Id);  //在spuInfoPage.html中
     }*/
+    function showSkuInfoList(){
+        var spuRow = $('#spulist_dg').datagrid('getSelected');
+        var ctg3val= $("#ctg3ForSpuList").combobox('getValue');
+        if(!spuRow){
+            $.messager.alert('警告','请先选择spu','warning');  }
+            else{
+                initSkuListDlg(spuRow.id,ctg3val);
+        }
+            }
+
+
 
 </script>
 </html>

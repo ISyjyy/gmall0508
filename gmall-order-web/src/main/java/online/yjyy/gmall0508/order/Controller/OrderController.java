@@ -45,14 +45,14 @@ public class OrderController {
     @RequestMapping("trade")
     @LoginRequire(autoRedirect = true)
 
-    public String tarde(HttpServletRequest request, Model model){
+    public String tarde(HttpServletRequest request, Model model) {
         // 获取用户Id
         String userId = (String) request.getAttribute("userId");
         // 送货清单地址
         List<UserAddress> userAddressList = userService.getUserAddressList(userId);
 
         // 送货清单：数据来源于 cartService
-        List<CartInfo> cartCheckedList =  cartService.getCartCheckedList(userId);
+        List<CartInfo> cartCheckedList = cartService.getCartCheckedList(userId);
 
         // 创建一个OrderDetail 集合
         ArrayList<OrderDetail> orderDetailList = new ArrayList();
@@ -77,26 +77,27 @@ public class OrderController {
 
 
         // 保存一个totalAmount 表示订单总价 [订单中所有的商品明细]
-        request.setAttribute("totalAmount",orderInfo.getTotalAmount());
+        request.setAttribute("totalAmount", orderInfo.getTotalAmount());
 
         // 保存orderDetail集合
-        request.setAttribute("orderDetailList",orderDetailList);
+        request.setAttribute("orderDetailList", orderDetailList);
 
-        request.setAttribute("userAddressList",userAddressList);
+        request.setAttribute("userAddressList", userAddressList);
 
         // 获取流水号
         String tradeNo = orderService.getTradeNo(userId);
-        request.setAttribute("tradeNo",tradeNo);
+        request.setAttribute("tradeNo", tradeNo);
         return "trade";
     }
 
     /**
      * 下订单，支付
+     *
      * @return
      */
-    @RequestMapping(value = "submitOrder",method = RequestMethod.POST)
+    @RequestMapping(value = "submitOrder", method = RequestMethod.POST)
     @LoginRequire(autoRedirect = true)
-    public String submitOrder(OrderInfo orderInfo,HttpServletRequest request){
+    public String submitOrder(OrderInfo orderInfo, HttpServletRequest request) {
         // 将订单数据 添加到数据库中 orderInfo ,oderDetail
         // 取得userId
         String userId = (String) request.getAttribute("userId");
@@ -104,9 +105,9 @@ public class OrderController {
         // 校验 获取流水号
         String tradeNo = request.getParameter("tradeNo");
         boolean result = orderService.checkTradeCode(userId, tradeNo);
-        if (!result){
+        if (!result) {
             // 验证失败！
-            request.setAttribute("errMsg","该页面已失效，请重新结算!");
+            request.setAttribute("errMsg", "该页面已失效，请重新结算!");
             return "tradeFail";
         }
 
@@ -127,8 +128,8 @@ public class OrderController {
             // 调用验库存
             boolean flag = orderService.checkStock(orderDetail.getSkuId(), orderDetail.getSkuNum());
             // 校验失败
-            if (!flag){
-                request.setAttribute("errMsg","库存不足，请重新下单!");
+            if (!flag) {
+                request.setAttribute("errMsg", "库存不足，请重新下单!");
                 return "tradeFail";
             }
         }
@@ -146,14 +147,15 @@ public class OrderController {
         orderService.delTradeCode(userId);
         // mysql --- 伪删除！
         // 支付的时候，需要根据orderId
-        return "redirect://payment.gmall.com/index?orderId="+orderId;
+        return "redirect://payment.gmall.com/index?orderId=" + orderId;
     }
+
     @RequestMapping("orderSplit")
     @ResponseBody
-    public String orderSplit(String orderId,String wareSkuMap,HttpServletRequest request){
+    public String orderSplit(String orderId, String wareSkuMap, HttpServletRequest request) {
         // 声明一个集合接收 【调用服务层的方法得到子订单List<OrderInfo>】
-        List<OrderInfo> subOrderInfoList  =  orderService.splitOrder(orderId,wareSkuMap);
-        List<Map> wareMapList=new ArrayList<>();
+        List<OrderInfo> subOrderInfoList = orderService.splitOrder(orderId, wareSkuMap);
+        List<Map> wareMapList = new ArrayList<>();
         // 遍历子订单集合返回字符串
         for (OrderInfo orderInfo : subOrderInfoList) {
             // orderInfo 主订单
@@ -164,6 +166,10 @@ public class OrderController {
         return JSON.toJSONString(wareMapList);
     }
 
-
+    @RequestMapping("list")
+    @LoginRequire(autoRedirect = true)
+    public String index() {
+        return "list";
+    }
 
 }

@@ -19,6 +19,7 @@ import java.util.Map;
 public class AuthInterceptor extends HandlerInterceptorAdapter {
     // preHandle 进入拦截器之前执行
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
         // 获取token 第一次登录获取到newToken,
         String token = request.getParameter("newToken");
         // 保存cookie
@@ -40,6 +41,9 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             String nickName = (String) map.get("nickName");
             // 保存
             request.setAttribute("nickName",nickName);
+            String userId = (String) map.get("userId");
+            // 保存
+            request.setAttribute("userId",userId);
         }
         // 判断-- 控制器中的每个方法上的RequestMapping()是否需要登录，是否有@LoginRequire
         HandlerMethod handlerMethod = (HandlerMethod) handler;

@@ -4,16 +4,17 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import online.yjyy.gmall0508.bean.UserInfo;
 import online.yjyy.gmall0508.passport.config.JwtUtil;
 import online.yjyy.gmall0508.service.UserService;
-import org.omg.CORBA.PRIVATE_MEMBER;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @Controller
 public class PassportController {
@@ -34,6 +35,28 @@ public class PassportController {
         return "index";
     }
 
+    @RequestMapping("registerUser")
+    @ResponseBody
+    public String registerUser(UserInfo userInfo, HttpServletRequest request){
+       String LoginName=userInfo.getLoginName();
+        UserInfo info = userService.queryUserInfo(LoginName);
+        if(info!=null){
+        if(info.getLoginName().equals(userInfo.getLoginName())){
+            return "fail";
+        }
+        }
+        String newPassword = DigestUtils.md5DigestAsHex(userInfo.getPasswd().getBytes());
+        // 赋值
+        userInfo.setPasswd(newPassword);
+        userInfo.setNickName(LoginName+UUID.randomUUID().toString().substring(0,5));
+        userService.addUserInfo(userInfo);
+        return "register";
+    }
+
+    @RequestMapping("register")
+    public String register(UserInfo userInfo,HttpServletRequest request){
+        return "register";
+    }
     // 前台传递参数到后台，对象传值：保证name 属性跟实体类属性名一致
     @RequestMapping("login")
     @ResponseBody

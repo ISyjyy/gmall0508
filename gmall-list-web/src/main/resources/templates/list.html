@@ -23,10 +23,18 @@
  
         </b>
         <ul>
-            <li>
-                <a href="#" class="li_2">你好，请登录</a>
+            <li th:hidden="${nickName==null?'false':'true'}">
+                <a href="http://passport.yjyy.com/index.html" style="color: red;">你好，请登录</a>
+            <li th:text="${nickName}"></li>
             </li>
-        
+            <li>
+                <a href="http://passport.yjyy.com/register.html" style="color: red;">免费注册</a>
+            </li>
+            <span>|</span>
+            <li th:hidden="${nickName==null?'true':'false'}">
+                <a href="http://www.gmall.com/logout" style="color: red;">注销</a>
+            </li>
+
         </ul>
     </div>
 </div>
@@ -42,7 +50,7 @@
     </div>
     <div class="header_ico">
         <div class="header_gw">
-            <span><a href="#">我的购物车</a></span>
+            <span><a href="http://cart.gmall.com/cartList">我的购物车</a></span>
             <img src="/image/settleup-@1x.png" />
             <span>0</span>
         </div>

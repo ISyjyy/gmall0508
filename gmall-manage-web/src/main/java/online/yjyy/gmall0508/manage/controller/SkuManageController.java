@@ -5,6 +5,7 @@ import online.yjyy.gmall0508.bean.SkuInfo;
 import online.yjyy.gmall0508.bean.SkuLsInfo;
 import online.yjyy.gmall0508.bean.SpuSaleAttr;
 import online.yjyy.gmall0508.bean.SpuSaleAttrValue;
+import online.yjyy.gmall0508.manage.mapper.SkuInfoMapper;
 import online.yjyy.gmall0508.service.ListService;
 import online.yjyy.gmall0508.service.ManageService;
 import org.apache.commons.beanutils.BeanUtils;
@@ -28,14 +29,23 @@ public class SkuManageController {
 
     @Reference
     private ListService listService;
-  /*  @RequestMapping("spuSaleAttrList")
+    @RequestMapping("skuInfoListBySpu")
     @ResponseBody
-    public List<SpuSaleAttr> spuSaleAttrList(String spuId){
-        *//*valueName = 是哪个表中，查出的数据应该 sale_attr_value_name*//*
-        List<SpuSaleAttr> spuSaleAttrList = manageService.getSpuSaleAttrList(spuId);
+    public List<SpuSaleAttr> getSkuInfoListBySpu(HttpServletRequest httpServletRequest){
+        String spuId = httpServletRequest.getParameter("spuId");
+        List skuInfoList = manageService.getSkuInfoListBySpu(spuId);
+        return skuInfoList;}
 
-        return spuSaleAttrList;
-    }*/
+    @RequestMapping("deleteSkuInfo")
+    @ResponseBody
+    public void deleteSkuInfo(HttpServletRequest httpServletRequest){
+        String skuId = httpServletRequest.getParameter("id");
+        manageService.deleteSkuInfoById(skuId);
+
+        listService.deleteEsSkuInfo(skuId);
+
+    }
+
 
     @RequestMapping("spuSaleAttrList")
     @ResponseBody
@@ -62,7 +72,7 @@ public class SkuManageController {
         manageService.saveSkuInfo(skuInfo);
          //上架商品
         // SkuInfo skuInfo = manageService.getSkuInfo(skuInfo.getId());
-        // 创建一个skuLsInfo对象
+       // 创建一个skuLsInfo对象
         SkuLsInfo skuLsInfo = new SkuLsInfo();
        //  审核流程，true ：saveSkuInfo false: rollback
         // 使用工具类：
@@ -74,7 +84,6 @@ public class SkuManageController {
             e.printStackTrace();
         }
         listService.saveSkuInfo(skuLsInfo);
-
 
         return "success";
     }

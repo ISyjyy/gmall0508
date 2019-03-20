@@ -29,6 +29,17 @@ public class UserInfo implements Serializable {
     @Column
     private String userLevel;
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    @Column
+    private String sex;
+
     // alt +insert
     public String getId() {
         return id;

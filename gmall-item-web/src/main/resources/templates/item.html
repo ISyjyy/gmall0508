@@ -58,10 +58,14 @@
 						</ul>
 						<ul class="header_ul_right">
 							<li style="border: 0;"><a href="http://passport.atguigu.com/index.html" class="aa" >
-								<span th:if="${nickName}!=null" th:text="${nickName}">	你好，请登录</span>
+								<span th:if="${nickName}!=null" th:text="${nickName}" style="color: red;">	你好，请登录</span>
 							</a></li>
-							<li><a href="http://passport.atguigu.com/index.html" style="color: red;">免费注册</a> |</li>
-							<li><a href="javascript:;" class="aa">我的订单</a> |</li>
+							<li><a href="http://passport.yjyy.com/register.html" style="color: red;">免费注册</a> |</li>
+							<li><a href="http://order.gmall.com/list">我的订单</a>|</li>
+							<li th:hidden="${nickName==null?'true':'false'}">
+								<a href="http://www.gmall.com/logout" style="color: red;">注销</a>
+							</li>
+							<li class="spacer"></li>
 						</ul>
 					</div>
 				</header>

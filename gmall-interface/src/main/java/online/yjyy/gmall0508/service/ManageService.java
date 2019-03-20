@@ -40,4 +40,12 @@ public interface ManageService {
     List<SkuSaleAttrValue> getSkuSaleAttrValueListBySpu(String spuId);
     //根据平台属性值id查询平台属性的集合
     List<BaseAttrInfo> getAttrList(List<String> attrValueIdList);
+     //删除平台属性
+    void deleteAttrInfo(String id);
+    //删除spuinfo
+    void deleteSpuInfo(String id);
+//查询sku列表
+    List getSkuInfoListBySpu(String spuId);
+//删除sku
+    void deleteSkuInfoById(String skuId);
 }

@@ -62,7 +62,7 @@
  
 				<h5 class="rig">
 						<img src="/img/4de5019d2404d347897dee637895d02b_25.png"/>
-						<span><a href="#">立即注册</a></span>
+						<span><a href="register">立即注册</a></span>
 					</h5>
 			</div>
 			</div>
@@ -104,7 +104,9 @@
                             var originUrl = $("#originUrl").val();
                             console.log("originUrl:"+originUrl);
                             if(originUrl==''){
-                                window.location.href="http://www.gmall.com/"
+                                window.location.href="http://www.gmall.com/index.html?"+"newToken="+data;
+                             /*  window.location.href="http://localhost:8080/index.html?"+"newToken="+data;*/
+
 								return ;
                             }
                             // 将originUrl 转码

@@ -25,8 +25,11 @@
 
         <ul class="hd_wrap_right">
         <li class="forel">
-        <a href="./javascript:;" class="link_login">你好,请登录</a>&nbsp;
-    <a href="./javascript:;" class="link_regist">免费注册</a>
+            <li th:text="${nickName}"></li>
+            <li th:hidden="${nickName==''?'false':'true'}">
+                <a href="http://passport.yjyy.com/index.html" style="color: red;">你好，请登录</a>
+            </li>
+            <li><a href="http://passport.yjyy.com/register.html" style="color: red;">免费注册</a></li>
         </li>
         <li class="spacer"></li>
 

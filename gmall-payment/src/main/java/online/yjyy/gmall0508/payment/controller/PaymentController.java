@@ -33,7 +33,7 @@ public class PaymentController {
     @Reference
     private OrderService orderService;
 
-    @Reference
+    @Autowired
     private PaymentService paymentService;
 
     @Autowired

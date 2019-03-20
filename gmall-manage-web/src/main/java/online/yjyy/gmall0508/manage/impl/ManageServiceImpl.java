@@ -378,5 +378,29 @@ public class ManageServiceImpl implements ManageService {
         return baseAttrInfoList;
     }
 
+    @Override
+    public void deleteAttrInfo(String id) {
+       // baseAttrInfoMapper.deleteAttrInfo(baseAttrInfo);
+        baseAttrInfoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void deleteSpuInfo(String id) {
+        spuInfoMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public List getSkuInfoListBySpu(String spuId) {
+       /* List skuInfoList = skuInfoMapper.selectSkuInfoListBySpu(Long.parseLong(spuId));*/
+        SkuInfo skuInfo = new SkuInfo();
+        skuInfo.setSpuId(spuId);
+        List<SkuInfo> skuInfoList = skuInfoMapper.select(skuInfo);
+        return  skuInfoList;
+    }
+
+    @Override
+    public void deleteSkuInfoById(String skuId) {
+        skuInfoMapper.deleteByPrimaryKey(skuId);
+    }
 
 }

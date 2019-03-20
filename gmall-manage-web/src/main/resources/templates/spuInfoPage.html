@@ -43,7 +43,7 @@
             <div style="margin-bottom:5px">
                 <a href="#" id="spuSaleAttrAddBtn" class="easyui-linkbutton" iconCls="icon-add" onclick="addSpuSaleAttr()" plain="true">添加销售属性</a>
                 <a href="#" id="spuSaleAttrEditBtn" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editSpuSaleAttr()">编辑销售属性</a>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" >删除</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeSpuSaleAttr()">删除</a>
             </div>
         </div>
 
@@ -57,6 +57,18 @@
     <a href="#" class="easyui-linkbutton" onclick="closeSpu()">关 闭</a>
 </div>
 <script type="text/javascript">
+ //删除销售属性
+    function removeSpuSaleAttr() {
+        var datagrid=$('#spuSaleAttrDg');
+        var row = datagrid.datagrid('getSelected');
+        if (row) {
+            var rowIndex = datagrid.datagrid('getRowIndex', row);
+            datagrid.datagrid('deleteRow', rowIndex);
+        }
+    }
+
+
+
 
     function editSpuSaleAttr(){
         var spuId= $("#spuId").val();
@@ -119,8 +131,6 @@
             // 重新加载dg的数据
             $("#spulist_dg").datagrid("reload");
         })
-
-
     }
     function addSpuSaleAttr() {
         // 调用初始化方法
@@ -142,11 +152,30 @@
         //初始化销售属性列表
         initSpuSaleAttrListDatagrid(spuInfo);
     }
+    function initSpuInfoDlg_add(){
+        //打开对话框
+        $('#spu_dlg').dialog("open");
+
+        //初始化表单,清空表单原始数据
+        initSpuForm();
+        //初始化图片表格 - 所有的列名
+        initSpuImgListDatagrid();
+
+        //初始化上传控件
+        initUploader();
+
+        //初始化销售属性列表
+        initSpuSaleAttrListDatagrid();
+    }
+
+
     function initSpuForm(spuInfo) {
         //清空文本框
 
         if(spuInfo==undefined) {
          $("#spuForm").form("clear");
+            $('#spuImgDg').datagrid({url:''});
+            $('#spuSaleAttrDg').datagrid({url:''});
             return;
         }
 
@@ -159,6 +188,7 @@
         $("#spu_dlg").dialog('close');
     }
     function initSpuImgListDatagrid(spuInfo) {
+
 
         $('#spuImgDg').datagrid('loadData', {total: 0, rows: []});
         console.log("初始化表格");
@@ -226,6 +256,7 @@
     }
     // 上传：百度的
     function initUploader(){
+
         console.log("初始化上传控件");
 
         var spuImgDg=  $("#spuImgDg");
@@ -298,6 +329,8 @@
 
     }
     function initSpuSaleAttrListDatagrid(spuInfo){
+
+
         var spuSaleAttrDg =$('#spuSaleAttrDg').datagrid('loadData', { total: 0, rows: [] });
         if(spuInfo){
             spuSaleAttrDg.datagrid({url:"spuSaleAttrList?spuId="+spuInfo.id});
@@ -312,7 +345,11 @@
             ]]
         });
     }
-
+    function editSkuInfo(){
+        var spuId = $('#spuIdForSkuList').val();
+        var catalog3Id=$('#catalog3IdForSkuList').val();
+        var skuInfo = $('#skulist_dg').datagrid('getSelected');
+        initSkuInfoDlg(spuId,skuInfo,catalog3Id);}
 </script>
 </body>
 </html>

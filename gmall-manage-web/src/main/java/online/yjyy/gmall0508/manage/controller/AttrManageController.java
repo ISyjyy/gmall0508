@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,6 +32,15 @@ public class AttrManageController {
         manageService.saveAttrInfo(baseAttrInfo);
         return "success";
     }
+    @RequestMapping(value = "deleteAttrInfo",method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteAttrInfo(@RequestParam("id")String id){
+        manageService.deleteAttrInfo(id);
+        return "success";
+    }
+
+
+
     // 所有的easyuI控件都必须返回Json ,显示的数据应该是平台属性值的集合。
     // baseAttrInfo , baseAttrValue  baseAttrInfo.id = baseAttrValue.attrId;
     @RequestMapping("getAttrValueList")
@@ -44,7 +54,7 @@ public class AttrManageController {
 
     // 商品上架 根据商品id进行上架  在skuManageController中 savesku方法中实现一边保存sku一边是上架商品
     // http://localhost:8082/onSale.do?skuId=33
-    @RequestMapping("onSale")
+    @RequestMapping("onSale.do")
     @ResponseBody
     public String onSale(String skuId){
         // 根据商品Id 获取到skuInfo ,然后将skuInfo 的属性 copy 到skuLsInfo

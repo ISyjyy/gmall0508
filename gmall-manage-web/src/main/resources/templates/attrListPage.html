@@ -25,7 +25,7 @@
         <div style="margin-bottom:5px">
             <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addAttrInfo()">添加</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editAttrInfo()">编辑</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteAttrInfo()">删除</a>
         </div>
         <div>
             一级分类：
@@ -89,10 +89,27 @@
         //进系统前先清空
         $("#attrId").val("");
         $("#attrName").textbox('clear');
+
         $('#dg_av').datagrid({url:''});
         // 做个dg，对dg进行初始化操作。
         initAttrValueDatagrid();
     }
+    //删除属性
+    function deleteAttrInfo() {
+        /* var attrInfoRow = $("#dg").datagrid("getSelected");
+        var attrJson = {};
+        attrJson["id"]=$("#attrId").val(attrInfoRow.id);
+         alert("确定要删除么");
+        console.log(attrJson);
+        $.post("deleteAttrInfo",attrJson,function () {
+           /!* $("#dg").datagrid('reload');*!/
+        })}*/
+        alert("确定要删除么");
+        var attrInfoRow = $("#dg").datagrid("getSelected");
+        $("#dg_av").datagrid({url: 'deleteAttrInfo?id=' + attrInfoRow.id});
+            $("#dg").datagrid('reload');
+    }
+    //编辑属性
     function editAttrInfo() {
         // 点击按钮，弹出对话框。
         $("#dlg").dialog('open');
@@ -104,12 +121,13 @@
         //初始化
         initAttrValueDatagrid();
 //        直接使用dg的url:"";
+
         var attrInfoRow = $("#dg").datagrid("getSelected");
         // 平台属性值的dg update baseAttrValue set valuename = ? , where attrId = baseAttrInfo.id
         $("#dg_av").datagrid({url: 'getAttrValueList?attrId='+attrInfoRow.id});
         // 进行数据加载！id, attrId, valueName
         $("#attrId").val(attrInfoRow.id);
-        $("#valueName").textbox('setValue',attrInfoRow.attrName);
+        $("#attrName").textbox('setValue',attrInfoRow.attrName);
 
         // 传递值。
     }

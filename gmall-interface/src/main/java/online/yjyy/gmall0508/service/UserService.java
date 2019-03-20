@@ -16,5 +16,12 @@ public interface UserService {
     UserInfo login(UserInfo userInfo);
     // 认证用户是否登录
     UserInfo verify(String userId);
-
+ //注册用户
+    void addUserInfo(UserInfo userInfo);
+//查询用户名是否重复
+    UserInfo queryUserInfo(String LoginName);
+    //id查询用户
+    UserInfo queryUserInfoById(String userId);
+  //更新用户信息
+    int updateUserInfo(UserInfo userInfo);
 }

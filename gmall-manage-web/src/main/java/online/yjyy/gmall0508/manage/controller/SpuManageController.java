@@ -47,6 +47,15 @@ public class SpuManageController {
         manageService.saveSpuInfo(spuInfo);
         return "success";
     }
+    @RequestMapping(value = "deleteSpuInfo")
+    @ResponseBody
+    public String deleteSpuInfo(@RequestParam("id")String id){
+        manageService.deleteSpuInfo(id);
+        return "success";
+    }
+
+
+
 /*    @RequestMapping("spuImageList")
     @ResponseBody
     public List<SpuImage> spuImageList (String spuId){
