@@ -24,7 +24,7 @@ import javax.jms.*;
 import javax.jms.Queue;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
-
+@SuppressWarnings("all")
 @Service
 public class OrderServiceImpl implements OrderService {
 
@@ -268,8 +268,28 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderInfo> queryOrderList( OrderInfo orderInfo) {
+      /*  Example example = new Example(OrderInfo.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andCondition()*/
+        return orderInfoMapper.select(orderInfo);
+    }
+
+    @Override
+    public List<OrderInfo> queryOrderMap(Long userId) {
+        return orderInfoMapper.selectOrderInfoList(userId);
+
+    }
+
+    @Override
+    public int delOrderInfoById(String orderId) {
+
+        return orderInfoMapper.deleteByPrimaryKey(orderId);
+    }
+
+    @Override
     public List<OrderInfo> getExpiredOrderList() {
-        // 过期时间《当前时间
+        // 过期时间当前时间
         Example example = new Example(OrderInfo.class);
         example.createCriteria().andEqualTo("processStatus",ProcessStatus.UNPAID).andLessThan("expireTime",new Date());
         List<OrderInfo> orderInfos = orderInfoMapper.selectByExample(example);

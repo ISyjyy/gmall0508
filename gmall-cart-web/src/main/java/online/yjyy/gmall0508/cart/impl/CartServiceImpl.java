@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import redis.clients.jedis.Jedis;
 
 import java.util.*;
-
+@SuppressWarnings("all")
 @Service
 public class CartServiceImpl implements CartService {
 
@@ -200,6 +200,20 @@ public class CartServiceImpl implements CartService {
 //        jedis.hmset(key,Map);
         jedis.close();
         return  cartInfoList;
+    }
+
+    @Override
+    public int delCartItrm(CartInfo cartInfo,String userId) {
+        //删除数据库
+        int ret = cartInfoMapper.delete(cartInfo);
+        //删除redis
+        Jedis jedis = redisUtil.getJedis();
+        // 定义key user:userId:cart
+        String userCartKey = CartConst.USER_KEY_PREFIX+userId+CartConst.USER_CART_KEY_SUFFIX;
+        // 取得redis的数据
+       // String cartJson  = jedis.hget(userCartKey, skuId);
+        jedis.hdel(userCartKey,cartInfo.getSkuId());
+        return ret;
     }
 
     /**

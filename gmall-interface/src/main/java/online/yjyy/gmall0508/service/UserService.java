@@ -24,4 +24,12 @@ public interface UserService {
     UserInfo queryUserInfoById(String userId);
   //更新用户信息
     int updateUserInfo(UserInfo userInfo);
+//增加用户收货地址
+    int addUserAddress(UserAddress userAddress);
+//查询当前用户的所有收货地址
+    List<UserAddress> queryUserAddress(UserAddress userAddress);
+//删除用户收货地址
+    int delUserAddress(String id);
+//更新用户密码
+    int upUserPassword(UserInfo userInfo);
 }

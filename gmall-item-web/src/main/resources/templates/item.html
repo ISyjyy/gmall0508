@@ -15,7 +15,7 @@
 
 					<div class="min">
 						<ul class="header_ul_left">
-							<li class="glyphicon glyphicon-home"> <a href="shouye.html" class="aa">首页</a></li>
+							<li class="glyphicon glyphicon-home"> <a href="http://www.gmall.com/index.html" class="aa">首页</a></li>
 							<li class="glyphicon glyphicon-map-marker"> <a href="javascript:;">北京</a>
 								<ol id="beijing">
 									<li style="background: red;"><a href="javascript:;" style="color: white;">北京</a></li>
@@ -74,7 +74,7 @@
 					<div class="nav_top">
 						<div class="nav_top_one"><a href="#"><img src="/img/logo1.jpg"/></a></div>
 						<div class="nav_top_two"><input type="text"/><button>搜索</button></div>
-						<div class="nav_top_three"><a href="../JD_Shop/One_JDshop.html">我的购物车</a><span class="glyphicon glyphicon-shopping-cart"></span>
+						<div class="nav_top_three"><a href="http://cart.gmall.com/cartList">我的购物车</a><span class="glyphicon glyphicon-shopping-cart"></span>
 							<div class="nav_top_three_1">
 								<img src="/img/44.png"/>购物车还没有商品，赶紧选购吧！
 							</div>
@@ -198,7 +198,8 @@
 
 								</li>
 								<li>
-									<span>无货</span>， 此商品暂时售完
+
+									<span th:text="${skuStock}">无货</span>
 								</li>
  
 							</ul>
@@ -266,18 +267,18 @@
 						<div class="box-btns clear">
 							<div class="box-btns-one">
 								<form id="itemForm" action="http://cart.gmall.com/addToCart" method="post">
-								<input type="text" name="skuNum" id="" value="1" />
+								<input type="text" name="skuNum" id="skuNum" value="1" />
 								<input type="hidden" name="skuId" th:value="${skuInfo.id}"  />
 
 								<div class="box-btns-one1">
 
 									<div>
-								    <button type="button" id="jia">
+								    <button type="button" onclick="jia();">
 									+
 									</button>
 									</div>
 									<div>
-								    <button type="button" id="jian">
+								    <button type="button" onclick="jian();">
 										-
 									</button>
 									</div>
@@ -1017,6 +1018,15 @@
 		function addToCart(){
 		    $("#itemForm").submit();
 		}
+		function jia() {
+			var num=document.getElementById("skuNum");
+            num.value = parseInt(num.value) + 1;
+        }
+        function jian() {
+            var num=document.getElementById("skuNum");
+            num.value = parseInt(num.value) - 1;
+        }
+
 	</script>
 
 </html>

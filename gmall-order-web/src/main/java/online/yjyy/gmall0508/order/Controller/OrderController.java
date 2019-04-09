@@ -3,10 +3,14 @@ package online.yjyy.gmall0508.order.Controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import online.yjyy.gmall0508.bean.*;
 import online.yjyy.gmall0508.bean.enums.OrderStatus;
 import online.yjyy.gmall0508.bean.enums.ProcessStatus;
 import online.yjyy.gmall0508.config.LoginRequire;
+import online.yjyy.gmall0508.config.RedisUtil;
+import online.yjyy.gmall0508.order.constant.CartConst;
 import online.yjyy.gmall0508.service.CartService;
 import online.yjyy.gmall0508.service.ManageService;
 import online.yjyy.gmall0508.service.OrderService;
@@ -16,7 +20,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -37,6 +43,8 @@ public class OrderController {
 
     @Reference
     private ManageService manageService;
+    @Autowired
+    private RedisUtil redisUtil;
 
 
     public OrderController() {
@@ -87,6 +95,7 @@ public class OrderController {
         // 获取流水号
         String tradeNo = orderService.getTradeNo(userId);
         request.setAttribute("tradeNo", tradeNo);
+        System.out.println("交易成功");
         return "trade";
     }
 
@@ -101,7 +110,6 @@ public class OrderController {
         // 将订单数据 添加到数据库中 orderInfo ,oderDetail
         // 取得userId
         String userId = (String) request.getAttribute("userId");
-
         // 校验 获取流水号
         String tradeNo = request.getParameter("tradeNo");
         boolean result = orderService.checkTradeCode(userId, tradeNo);
@@ -110,7 +118,6 @@ public class OrderController {
             request.setAttribute("errMsg", "该页面已失效，请重新结算!");
             return "tradeFail";
         }
-
         // 校验库存 ： 每个订单都需要校验
         List<OrderDetail> orderDetailList = orderInfo.getOrderDetailList();
         for (OrderDetail orderDetail : orderDetailList) {
@@ -152,6 +159,7 @@ public class OrderController {
 
     @RequestMapping("orderSplit")
     @ResponseBody
+    @LoginRequire(autoRedirect = true)
     public String orderSplit(String orderId, String wareSkuMap, HttpServletRequest request) {
         // 声明一个集合接收 【调用服务层的方法得到子订单List<OrderInfo>】
         List<OrderInfo> subOrderInfoList = orderService.splitOrder(orderId, wareSkuMap);
@@ -166,9 +174,55 @@ public class OrderController {
         return JSON.toJSONString(wareMapList);
     }
 
+    @RequestMapping("delOrderInfoById")
+    @ResponseBody
+    @LoginRequire(autoRedirect = true)
+    public String delOrderInfoById(@RequestParam("id") String orderId){
+        orderService.delOrderInfoById(orderId);
+        return "success";
+    }
+
+    @RequestMapping("delOrderItem")
+    @ResponseBody
+    @LoginRequire(autoRedirect = true)
+    public String delOrderItem(@RequestParam("skuId") String skuId,HttpServletRequest request){
+        String userId = (String) request.getAttribute("userId");
+        String userCheckedKey = CartConst.USER_KEY_PREFIX + userId + CartConst.USER_CHECKED_KEY_SUFFIX;
+        // 获取redis 对象
+        Jedis jedis = redisUtil.getJedis();
+        jedis.hdel(userCheckedKey,skuId);
+        return "success";
+    }
+
     @RequestMapping("list")
     @LoginRequire(autoRedirect = true)
-    public String index() {
+    public String index(HttpServletRequest request, Model model){//查询当前用户所有订单
+      //  OrderInfo orderInfo=new OrderInfo();
+        String userId = (String) request.getAttribute("userId");
+      //  orderInfo.setUserId(userId);
+       // List<OrderInfo> orderInfoList = orderService.queryOrderList(orderInfo);
+        String pageNum = request.getParameter("pageNo");
+        int ret=1;
+        if(pageNum!=null&&!"".equals(pageNum)) {
+            ret = Integer.parseInt(pageNum);
+        }
+        PageHelper.startPage(ret,3);
+        List<OrderInfo> orderInfoList = orderService.queryOrderMap(Long.parseLong(userId));
+        PageInfo<OrderInfo> pageInfo=new PageInfo<>(orderInfoList,3);
+       for (OrderInfo info : orderInfoList) {
+           // System.out.println(info.getImgUrl());
+            List<OrderDetail> orderDetailList = info.getOrderDetailList();
+           // System.out.println(orderDetailList);
+            for (OrderDetail orderDetail : orderDetailList) {
+             //   System.out.println(orderDetail);
+                info.setTrackingNo(orderDetail.getSkuName());  //名称
+            }
+        }
+        //model.addAttribute("orderList",orderInfoList);
+       model.addAttribute("orderList",pageInfo.getList());
+        model.addAttribute("pageInfo",pageInfo);
+       // System.out.println(pageInfo);
+      //  System.out.println(orderInfoList);
         return "list";
     }
 

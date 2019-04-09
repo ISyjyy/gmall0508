@@ -38,5 +38,10 @@ public interface OrderService {
     // 获取子订单集合
     List<OrderInfo> splitOrder(String orderId, String wareSkuMap);
 
+    //查询所有的订单状态
+    List<OrderInfo> queryOrderList(OrderInfo orderInfo);
 
+    List queryOrderMap(Long userId);
+
+    int delOrderInfoById(String orderId);
 }

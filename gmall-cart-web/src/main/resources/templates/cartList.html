@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>购物车</title>
-    <link rel="icon" href="./img/心04.png" type="./image/x-icon"/>
-    <link rel="stylesheet" href="./css/One_bdyStyle.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="./css/One_mainFoot.css">
-    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="icon" href="/../img/心04.png" type="./image/x-icon"/>
+    <link rel="stylesheet" href="/../css/One_bdyStyle.css">
+    <link rel="stylesheet" href="/../css/index.css">
+    <script src="/../js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/../css/One_mainFoot.css">
+    <link rel="stylesheet" href="/../css/font-awesome-4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="/../css/list.css">
+    <link rel="stylesheet" href="/../bootstrap/css/bootstrap.min.css">
+    <script src="/../js/jquery-3.1.1.min.js"></script>
+    <script src="/../bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
 <header>
@@ -17,8 +21,7 @@
 
             <ul class="header-left">
                 <li>
-
-                    <a href="">首页</a>
+                    <a href=""></a>
                 </li>
 
             </ul>
@@ -53,12 +56,12 @@
                 <a href="../" class="one_left_logo"><img src="img/logo1.jpg"></a>
                 <a href="#" class="one_left_link">购物车</a>
             </div>
-            <div class="one_top_right">
+         <!--   <div class="one_top_right">
                 <input type="text" class="one_right_txt" placeholder="" onfocus="this.placeholder=''"  onblur="this.placeholder='' ">
                 <input type="button" value="搜索" class="one_right_btn">
-            </div>
+            </div>-->
         </div>
-        <div class="one_search_load"    >
+        <div class="one_search_load"   th:hidden="${nickName==null?'false':'true'}" >
             <img src="./img/shop_07.jpg" class="one_load_wraing">
             <span>您还没有登录！登录后购物车的商品将保存到您账号中</span>
             <a href="#"><input type="button" onclick="login()" value="立即登录" class="one_load_btn"></a>
@@ -112,58 +115,84 @@
                                 </p>
                             </li>
                             <li style="font-weight:bold"><p class="zj" th:text="${cartInfo.skuNum}*${cartInfo.skuPrice}" >￥22995.00</p></li>
-                            <li>
-                                <p>删除</p>
+                            <li th:hidden="${nickName==null?'true':'false'}" >
+                                <p th:onclick="'delItem('+${cartInfo.skuId}+')'">删除</p>
                             </li>
+                         <!--   <div class="One_isDel">
+                                <p>
+                                    <span>删除</span><span><img src="img/错误.png" alt=""></span>
+                                </p>
+                                <div>
+                                    <dl>
+                                        <dt><img src="img/感叹三角形 (2).png" alt="" style="padding-left: 118px;"></dt>
+                                        <dd>
+                                            <li style="padding-left: 70px;">确定要删除商品？</li>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div>
+                                    <button  type="button" onclick="delItem(1)" th:onclick="'delItem('+${cartInfo.skuId}+')'">删除</button>
+
+                                </div>
+                            </div>-->
+                            <div class="One_moveGzIfNull">
+                                <p>
+                                    <span>删除</span><span><img src="img/错误.png" alt=""></span>
+                                </p>
+                                <dl>
+                                    <dt><img src="img/感叹三角形 (2).png" alt="" style="padding-left: 120px;"></dt>
+                                    <dd style="padding-left: 70px;">请至少选中一件商品！</dd>
+                                </dl>
+                            </div>
+                            <div class="One_moveMyGz">
+                                <p>
+                                    <span>删除</span><span><img src="img/错误.png" alt=""></span>
+                                </p>
+                                <div>
+                                    <dl>
+                                        <dt><img src="img/感叹三角形 (2).png" alt=""></dt>
+                                        <dd>
+                                            <li>移到关注</li>
+                                            <li>移动后选中商品将不再购物车中显示</li>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div>
+                                    <button type="button">确定</button>
+                                    <button type="button">取消</button>
+                                </div>
+                            </div>
+                            <div class="One_clearShop">
+                                <p>
+                                    <span>提示</span><span><img src="img/错误.png" alt=""></span>
+                                </p>
+                                <dl>
+                                    <dt><img src="img/感叹三角形 (2).png" alt=""></dt>
+                                    <dd>没有下柜商品!</dd>
+                                </dl>
+                            </div>
+
                         </ol>
                     </div>
                 </li>
-                 <!--<li>
-                    <div>
-                    </div>
-                    <div>
-                        <ol>
-                            <li><input type="checkbox"  class="check"></li>
-                            <li>
-                                <dt><img src="img\shop1.jpg" alt=""></dt>
-                                <dd>
-                                    <p>
-
-                                        <span>TCL 55A950C 55英寸32核</span>
-                                        <span>尺码: 55时 超薄曲面 人工智能</span>
-                                    </p>
-                                    <p>人工智能 HDR曲面超薄4K电视金属机</p>
-
-                                </dd>
-                            </li>
-                            <li>
-                                <p class="dj">￥4599.00</p>
-
-                            </li>
-                            <li>
-                                <p>
-                                    <span>-</span>
-                                    <span>5</span>
-                                    <span>+</span>
-                                </p>
-
-                            </li>
-                            <li style="font-weight:bold"><p class="zj">￥22995.00</p></li>
-                            <li>
-                                <p>删除</p>
-
-                            </li>
-                        </ol>
-                    </div>
-                </li> -->
 
             </ul>
         </div>
-        <div class="One_ShopFootBuy fix1">
+        <div class="pull-right pagination"  style="padding-top: 0px;padding-left: 10px;padding-bottom: 0px;margin-top: 0px;">
+            <ul class="pagination">
+                <li class="page-pre"><a th:href="'?pageNo='+${pageInfo.prePage}">‹</a></li>
+                <li class="page-number"  th:each="nav : ${pageInfo.navigatepageNums}">
+                    <a th:href="'?pageNo='+${nav}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}" ></a>
+                    <span style="font-weight: bold ;color: red" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+                <li class="page-next"><a th:href="'?pageNo='+${pageInfo.nextPage}" >›</a></li>
+
+            </ul>
+        </div>
+        <div class="One_ShopFootBuy fix1 ">
             <div>
                 <ul>
                     <li><input type="checkbox" class="allCheck"><span>全选</span></li>
-                    <li>删除选中的商品</li>
+                <!--    <li>删除选中的商品</li>-->
                     <li>移到我的关注</li>
                     <li>清除下柜商品</li>
                 </ul>
@@ -187,7 +216,7 @@
     </div>
 </div>
 
-<div class="One_isDel">
+<!--<div class="One_isDel">
     <p>
         <span>删除</span><span><img src="img/错误.png" alt=""></span>
     </p>
@@ -201,7 +230,7 @@
             </dl>
     </div>
     <div>
-        <button type="button">删除</button>
+        <button id="delItemById" type="button">删除</button>
 
     </div>
 </div>
@@ -240,27 +269,7 @@
         <dt><img src="img/感叹三角形 (2).png" alt=""></dt>
         <dd>没有下柜商品!</dd>
     </dl>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>-->
 
 <!--底部-->
 
@@ -271,6 +280,15 @@
 <script src="./js/index.js" charset="utf-8"></script>
 <script type="text/javascript">
 
+    function delItem(skuId) {
+        //window.location.href="http://cart.gmall.com//delCartItem?skuId="+skuId;
+        console.log(skuId);
+        var param="skuId="+skuId;
+        $.post("delCartItem",param,function (data) {
+                window.location.href="http://cart.gmall.com/cartList";
+        });
+
+    }
      function toTrade(){
          window.location.href="http://cart.gmall.com/toTrade";
     }
@@ -459,7 +477,7 @@
         }
     })
     //删除已选的商品
-    $(".One_ShopFootBuy>div:first-child ul li:nth-child(2)").click(function(){
+    $(".One_ShopFootBuy>div:first-child ul li:nth-child(2)").click(function(skuId){
         // $(".check").each(function(){
         if($(".check").is(":checked")==false){
             $(".One_mb").show();
@@ -468,7 +486,10 @@
             $(".One_mb").show();     //蒙版显示
             $(".One_isDel").show();  //删除弹框显示
             $(".One_moveGzIfNull").hide();
+
         }
+
+
         //移除结账固定定位
         // if($(".check").length==1){
         // 	$(".fix").remove();
@@ -603,17 +624,17 @@
         $(".One_DengLu").show();
     })
     //点击删除
-    //点击删除出现弹框
+   /* //点击删除出现弹框
     $(".One_isDel>p img").click(function(){
         $(".One_mb").hide();
         $(".One_isDel").hide();
-    })
-    $(".One_ShopCon ul li>div:nth-child(2) ol>li:nth-child(6) p:first-child").click(function(){
+    })*/
+/*    $(".One_ShopCon ul li>div:nth-child(2) ol>li:nth-child(6) p:first-child").click(function(){
         $(".One_mb").show();
         $(".One_isDel").show();
         var that=$(this);
         //确定删除
-/*        $(".One_isDel>div:last-child button:first-child").click(function(){
+/!*        $(".One_isDel>div:last-child button:first-child").click(function(){
             $(".One_mb").hide();
             $(".One_isDel").hide();
             that.parent().parent().parent().parent().remove();
@@ -629,8 +650,8 @@
                 $(".sumNum").html("0");
                 $(".fnt").html("￥ 0.00");
             }
-        })*/
-    })
+        })*!/
+    })*/
 /*    //页面滚动删除去结算固定定位隐藏
     $(document).scroll(function(){
         if($(".fix").offset().top>$(".fix1").offset().top){

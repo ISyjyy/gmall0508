@@ -37,4 +37,6 @@ public interface GwareService {
     public List<WareSku> getWareSkuList();
 
     public List<WareInfo> getWareInfoList();
+
+   public WareSku queryStockBySkuId(String skuId);
 }

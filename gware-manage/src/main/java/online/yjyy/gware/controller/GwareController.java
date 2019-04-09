@@ -29,6 +29,7 @@ public class GwareController {
     @Autowired
     GwareService gwareService;
 
+
     @RequestMapping("index")
     public String index(){
         return "index";
@@ -37,6 +38,17 @@ public class GwareController {
     public String wareSkuListPage(){
         return "wareSkuListPage";
     }
+
+    //查询库存数量
+    @RequestMapping("queryStock")
+    @ResponseBody
+    public WareSku queryStock(@RequestParam("skuId") String skuid){
+        System.out.println(skuid);
+
+        WareSku wareSku = gwareService.queryStockBySkuId(skuid);
+        return wareSku;
+    }
+
 
     //根据sku判断是否有库存
     @RequestMapping("hasStock")

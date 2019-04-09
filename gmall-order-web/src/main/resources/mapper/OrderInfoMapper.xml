@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online.yjyy.gmall0508.order.mapper.OrderInfoMapper">
+
+
+    <resultMap id="orderInfoMap" type="online.yjyy.gmall0508.bean.OrderInfo" autoMapping="true">
+        <id property="id" column="id"></id>
+        <collection property="orderDetailList" ofType="online.yjyy.gmall0508.bean.OrderDetail" autoMapping="true">
+            <id property="id" column="order_detail_id"></id>
+        </collection>
+    </resultMap>
+    <select id="selectOrderInfoList" resultMap="orderInfoMap">
+   select oi.id,oi.consignee,oi.total_amount,oi.payment_way,oi.order_comment,oi.user_id,oi.img_url,
+       oi.out_trade_no,od.id order_detail_id ,od.sku_name
+ FROM order_info oi inner join order_detail od on oi.id=od.order_id
+ where oi.user_id=#{user_id}
+    </select>
+
+</mapper>

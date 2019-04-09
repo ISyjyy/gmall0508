@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>sku列表</title>
+    <script type="text/javascript" src="/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/easyui/easyloader.js"></script>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css"  href="/easyui/themes/default/easyui.css">
+    &lt;!&ndash;引入图片上传工具webuploader&ndash;&gt;
+    <link rel="stylesheet" type="text/css" href="/webuploader/webuploader.css">
+    <script type="text/javascript" src="/webuploader/webuploader.js"></script>
+</head>-->
+<body>
+<div id="skulist_dlg" class="easyui-dialog" title="sku列表" style="width:700px;height:520px;" closed="true"  data-options="resizable:true,modal:false"   >
+    <table id="skulist_dg" class="easyui-datagrid" data-options="singleSelect:true,method:'get',toolbar:'#skulist_tb'">
+    <thead>
+       <tr>
+           <th data-options="field:'id'" width="10%">库存单元id </th>
+           <th data-options="field:'skuName'" width="60%">库存单元名称</th>
+           <th data-options="field:'price'" width="30%">价格</th>
+           <th data-options="field:'weight',hidden:'true'" >重量</th>
+           <th data-options="field:'catalog3Id',hidden:'true'">三级分类</th>
+           <th data-options="field:'skuImageList',hidden:'true'"  >图片列表</th>
+           <th data-options="field:'skuAttrValueList',hidden:'true'"  >平台属性</th>
+           <th data-options="field:'skuSaleAttrValueList',hidden:'true'"  >销售属性</th>
+           <th data-options="field:'skuDesc',hidden:'true'"  >商品描述 </th>
+           <th data-options="field:'skuDefaultImg',hidden:'true'">默认图片 </th>
+       </tr>
+       </thead>
+   </table>
+    <div id="skulist_tb" style="padding:5px;height:auto">
+        <div style="margin-bottom:5px">
+            <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editSkuInfo()">编辑sku</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteSkuInfo()">删除sku</a>
+            <input id="spuIdForSkuList" name="spuIdForSkuId" type="hidden"/>
+            <input id="catalog3IdForSkuList" name="catalog3IdForSkuId" type="hidden"/>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-search"  onclick="javascript:reloadSkuList()" >刷新sku列表</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function reloadSkuList(){
+       /* var ctg3val=$("#ctg3ForSpuList").combobox('getValue');
+        $('#spulist_dg').datagrid({url:'skuList?catalog3Id='+ctg3val});*/
+        showSkuInfoList();
+    }
+    function deleteSkuInfo(){
+        alert("确定要删除么");
+        /*var spuRow = $('#spulist_dg').datagrid('getSelected');
+        $('#spulist_dg').datagrid({url:'deleteSpuInfo?id='+spuRow.id});*/
+        var skuRow = $('#skulist_dg').datagrid('getSelected');
+        $('#skulist_dg').datagrid({url:'deleteSkuInfo?id='+skuRow.id});
+        showSkuInfoList();
+    }
+
+    function  initSkuListDlg(spuId,catalog3Id){
+
+        $('#spuIdForSkuList').val(spuId);
+        $('#catalog3IdForSkuList').val(catalog3Id);
+        $('#skulist_dlg').dialog("open");
+        initSkuListDatagrid(spuId);
+    }
+    function initSkuListDatagrid(spuId){
+        $("#skulist_dg").datagrid({url:"skuInfoListBySpu?spuId="+spuId});
+    }
+    function editSkuInfo(){
+        var spuId = $('#spuIdForSkuList').val();
+    var catalog3Id=$('#catalog3IdForSkuList').val();
+    var skuInfo = $('#skulist_dg').datagrid('getSelected');
+    initSkuInfoDlg(spuId,skuInfo,catalog3Id);
+
+    }
+
+</script>
+</html>

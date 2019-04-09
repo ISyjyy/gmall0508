@@ -8,11 +8,17 @@ import online.yjyy.gmall0508.bean.SpuSaleAttr;
 import online.yjyy.gmall0508.config.LoginRequire;
 import online.yjyy.gmall0508.service.ListService;
 import online.yjyy.gmall0508.service.ManageService;
+import online.yjyy.gware.bean.WareInfo;
+import online.yjyy.gware.bean.WareSku;
+import online.yjyy.gware.service.GwareService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -24,15 +30,28 @@ public class ItemController {
     @Reference
     private ListService listService;
 
+    @Reference
+    private GwareService gwareService;
+
+
     @RequestMapping("{skuId}.html")
     //@LoginRequire(autoRedirect = true)
     public String skuInfoPage(@PathVariable String skuId, HttpServletRequest request) {
         // 能够得到skuId
         System.out.println(skuId);
+        WareSku wareSku1 = gwareService.queryStockBySkuId(skuId);
+        System.out.println(wareSku1);
+        if(wareSku1!=null){
+          //  WareSku wareSku = (WareSku) list.get(0);
+            System.out.println(wareSku1);
+            request.setAttribute("skuStock",wareSku1.getStock());
+        }
         SkuInfo skuInfo = manageService.getSkuInfo(skuId);
         // 保存上skuInfo 信息
         // 1.保存图片数据。2.在前台使用skuInfo.skuImageList
         request.setAttribute("skuInfo", skuInfo);
+
+
         // 销售属性，属性值显示
         List<SpuSaleAttr> spuSaleAttrList = manageService.selectSpuSaleAttrListCheckBySku(skuInfo);
         // 将其存入作用域中

@@ -1,6 +1,8 @@
 package online.yjyy.gmall0508.cart.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import online.yjyy.gmall0508.bean.CartInfo;
 import online.yjyy.gmall0508.bean.SkuInfo;
 import online.yjyy.gmall0508.config.LoginRequire;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -58,6 +61,12 @@ public class CartController {
     public String cartList(HttpServletRequest request, HttpServletResponse response){
         // 根据userId 判断
         String userId = (String) request.getAttribute("userId");
+        String pageNum = request.getParameter("pageNo");
+        int ret=1;
+        if(pageNum!=null&&!"".equals(pageNum)) {
+            ret = Integer.parseInt(pageNum);
+        }
+        PageHelper.startPage(ret,4);
         if (userId!=null){
             // 从redis --- mysql
             // 先判断cookie是否有购物车
@@ -72,13 +81,18 @@ public class CartController {
                 // 没有：直接显示redis - mysql。
                 cartList = cartService.getCartList(userId);
             }
-            request.setAttribute("cartList",cartList);
+            PageInfo pageInfo=new PageInfo(cartList,1);
+           // request.setAttribute("cartList",cartList);
+            request.setAttribute("cartList",pageInfo.getList());
+            request.setAttribute("pageInfo",pageInfo);
         }else { 
             // cookie 中查询
             List<CartInfo> cartList = cartCookieHandler.getCartList(request);
-            request.setAttribute("cartList",cartList);
+            // request.setAttribute("cartList",cartList);
+            PageInfo pageInfo=new PageInfo(cartList,1);
+            request.setAttribute("cartList",pageInfo.getList());
+            request.setAttribute("pageInfo",pageInfo);
         }
-
         return "cartList";
     }
     /**
@@ -101,6 +115,34 @@ public class CartController {
             cartCookieHandler.checkCart(request,response,skuId,isChecked);
         }
     }
+    @RequestMapping("delCartItem")
+    @LoginRequire(autoRedirect = false)
+    @ResponseBody
+    public String delCartItem(HttpServletRequest request,HttpServletResponse response){
+        String skuId = request.getParameter("skuId");
+        //String isChecked = request.getParameter("isChecked");
+        // 获取用户Id ，来判断用户是否登录
+        String userId = (String) request.getAttribute("userId");
+        CartInfo cartInfo=new CartInfo();
+        cartInfo.setUserId(userId);
+        cartInfo.setSkuId(skuId);
+
+        if (userId!=null){
+            System.out.println(cartInfo);
+            int ret = cartService.delCartItrm(cartInfo, userId);
+            if(ret>0) {
+                return "success";
+            }else{
+                return "fail";
+            }
+
+        }else{
+            cartCookieHandler.deleteCartCookie(request,response);
+            return "fail";
+        }
+    }
+
+
 
     @RequestMapping("toTrade")
     @LoginRequire(autoRedirect = true)

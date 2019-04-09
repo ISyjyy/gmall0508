@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>订单列表</title>
-  <link rel="stylesheet" href="css/list.css">
+  <link rel="stylesheet" href="/../css/list.css">
+  <link rel="stylesheet" href="/../bootstrap/css/bootstrap.min.css">
+  <script src="/../js/jquery-3.1.1.min.js"></script>
+  <script src="/../bootstrap/js/bootstrap.js"></script>
   <style media="screen">
     * {
       font-family: "微软雅黑";
@@ -23,7 +26,7 @@
       <div class="myjd">
       </div>
       <ul class="nav_ul">
-        <li>首页</li>
+        <a href="http://www.gmall.com/index.html" style="color: black">首页</a>
 
 
       </ul>
@@ -100,7 +103,7 @@
             <tr>
               <td colspan="7" style="background:#F7F7F7"  class="order-header" >
                 <span style="color:#AAAAAA" text="2018-04-22 19:33:00"> </span>
-                <span><ruby style="color:#AAAAAA">订单号:</ruby><span  text=""></span>  </span>
+                <span><ruby style="color:#AAAAAA">订单号:</ruby><span  th:text="${orderInfo.outTradeNo}"></span>  </span>
                 <span>状态 </span>
               </td>
             </tr>
@@ -110,16 +113,16 @@
             <!--不拆单情况------------------->
             <tr >
               <td colspan="3" class="item">
-                <img    src="img/ding.jpg" alt="" class="img">
+                <img  th:src="${orderInfo.imgUrl}" src="img/ding.jpg" alt="" class="img">
                 <div>
-                  <p >商品名称11111111111111</p>
+                  <p th:text="${orderInfo.trackingNo}">商品名称11111111111111</p>
                 </div>
                 <div style="margin-left:15px;"  >X 1</div>
               </td>
 
-              <td    rowspan="2" ><span  >张晨</span> </td>
+              <td    rowspan="2" ><span  th:text="${orderInfo.consignee}">张晨</span> </td>
               <td  rowspan="2">
-                <div style="margin-left:15px;"> 总额 9999</div>
+                <div style="margin-left:15px;" th:text="${orderInfo.totalAmount}"> 总额 9999</div>
                 <hr style="width:90%;">
                 <p   >在线支付</p>
               </td>
@@ -142,16 +145,16 @@
                     </div>
                   </div>
                 </li>
-                <li class="tdLi">订单详情</li>
+             <!--   <li class="tdLi">订单详情</li>-->
               </ul>
             </td>
             <td   rowspan="2">
-              <button>确认收货</button>
-              <p style="margin:4px 0; ">取消订单</p>
-              <p>催单</p>
+              <button th:onclick="'sureadd('+${orderInfo.id}+')'">确认收货</button>
+              <p style="margin:4px 0; cursor: pointer " th:onclick="'delOrderId('+${orderInfo.id}+')'">取消订单</p>
+              <p style="cursor: pointer " onclick="cuidan()">催单</p>
             </td>
             </tr>
-
+<!--
 
             <tr >
               <td colspan="3" class="item">
@@ -162,7 +165,7 @@
                 <div style="margin-left:15px;"  >X 2</div>
               </td>
  
-            </tr>
+            </tr>-->
 
 
             <!-- 拆单情况------------------->
@@ -239,13 +242,7 @@
             <!-- 拆单情况------------------->
           </table>
 
-
-
-
-
-
-
-        <table class="table">
+<!--        <table class="table">
           <tr>
             <td colspan="7" style="background:#F7F7F7"  class="order-header" >
               <span style="color:#AAAAAA">2017-12-09 20:50:10</span>
@@ -388,30 +385,28 @@
  
             </td>
 		 </tr>
-        </table>
-
- 
+        </table>-->
 
 
- 
-
- 
-
-
- 
-
-        <div class="order_btm">
+    <!--    <div class="order_btm">
           <div>
             <button>上一页</button>
             <span>1</span>
             <button>下一页</button>
-          </div>
+          </div>-->
+        <div class="pull-right pagination">
+          <ul class="pagination">
+            <li class="page-pre"><a th:href="'?pageNo='+${pageInfo.prePage}">‹</a></li>
+            <li class="page-number"  th:each="nav : ${pageInfo.navigatepageNums}">
+              <a th:href="'?pageNo='+${nav}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}" ></a>
+              <span style="font-weight: bold ;color: red" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+            <li class="page-next"><a th:href="'?pageNo='+${pageInfo.nextPage}" >›</a></li>
+
+          </ul>
+        </div>
         </div>
         <div style="clear:both;"></div>
       </div>
-
-
-
 
 
     </div>
@@ -423,7 +418,6 @@
 
   <div class="fixed">
     <div class="dog">
-      <img src="img/joygif.gif" alt="">
     </div>
     <div class="teSe">
       <ul>
@@ -440,5 +434,30 @@
 </body>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/list.js"></script>
+<script>
+  function delOrderId(id) {
+      alert("您确定要取消订单么?");
+      console.log(id);
+      var param="id="+id;
+      $.post("delOrderInfoById",param,function (data) {
+          window.location.href="http://order.gmall.com/list";
+      });
+
+  }
+  function cuidan() {
+      alert("已成功催促卖家发货！");
+  }
+
+  function sureadd(id) {
+      alert("您确定要确认收货么?");
+      console.log(id);
+      var param="id="+id;
+      $.post("delOrderInfoById",param,function (data) {
+          window.location.href="http://order.gmall.com/list";
+      });
+
+  }
+
+</script>
 
 </html>

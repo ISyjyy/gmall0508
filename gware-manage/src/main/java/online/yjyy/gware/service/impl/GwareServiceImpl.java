@@ -1,6 +1,7 @@
 package online.yjyy.gware.service.impl;
 
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
 
 import online.yjyy.gware.util.HttpclientUtil;
@@ -19,7 +20,6 @@ import org.apache.activemq.command.ActiveMQMapMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -75,6 +75,21 @@ public class GwareServiceImpl implements GwareService {
     public List<WareInfo> getWareInfoList(){
         List<WareInfo> wareInfos = wareInfoMapper.selectAll();
         return wareInfos;
+    }
+
+    @Override
+    public WareSku queryStockBySkuId(String skuId) {
+         WareSku wareSku=new WareSku();
+         wareSku.setSkuId(skuId);
+
+      /*  WareSku wareSku1 = wareSkuMapper.selectOne(wareSku);
+        System.out.println("查询对象wareSku1"+wareSku1);
+        List<WareSku> select = wareSkuMapper.select(wareSku);
+        System.out.println("select"+select);*/
+
+        WareSku wareSku1 = wareSkuMapper.selectWareSkuBySkuId(skuId);
+        //  List<WareSku> wareSkus = wareSkuMapper.selectByExample(skuId);
+        return wareSku1;
     }
 
 

@@ -202,6 +202,12 @@ public class CartServiceImpl implements CartService {
         return  cartInfoList;
     }
 
+    @Override
+    public int delCartItrm(CartInfo cartInfo, String userId) {
+        return 0;
+    }
+
+
     /**
      * @param skuId     商品Id
      * @param isChecked 商品的状态

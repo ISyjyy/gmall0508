@@ -21,12 +21,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
+@SuppressWarnings("all")
 @Controller
 public class PaymentController {
 
@@ -47,6 +48,8 @@ public class PaymentController {
         OrderInfo orderInfo = orderService.getOrderInfo(orderId);
         // 存储orderId
         request.setAttribute("orderId",orderId);
+        HttpSession session=request.getSession();
+        session.setAttribute("orderId",orderId);
         // 存储总金额
         request.setAttribute("totalAmount",orderInfo.getTotalAmount());
         return "index";
@@ -112,7 +115,15 @@ public class PaymentController {
 
     // 测试同步回调
     @RequestMapping("/alipay/callback/return")
-    public String callbackReturn(){
+    public String callbackReturn(HttpServletRequest request){
+        HttpSession session=request.getSession();
+        String orderId = (String) session.getAttribute("orderId");
+        PaymentInfo paymentInfoQuery = new PaymentInfo();
+        paymentInfoQuery.setOrderId(orderId);
+        // select * from paymentInfo where orderId = ?
+        PaymentInfo paymentInfo = paymentService.getPaymentInfo(paymentInfoQuery);
+        // 主动 查询支付结果 PaymentInfo 对象 中才会有out_trade_no
+        boolean flag = paymentService.checkPayment(paymentInfo);
         return "redirect:"+AlipayConfig.return_order_url;
     }
 
@@ -151,6 +162,15 @@ public class PaymentController {
                 paymentService.updatePaymentInfo(paymentInfo);
                 // paymentService.updatePaymentInfoByOutTradeNo(out_trade_no,paymentInfo);
                 paymentService.sendPaymentResult(paymentInfo,"success");
+            /* //查看是否支付成功
+                HttpSession session=request.getSession();
+                String orderId = (String) session.getAttribute("orderId");
+               // PaymentInfo paymentInfoQuery = new PaymentInfo();
+                paymentInfoQuery.setOrderId(orderId);
+                // select * from paymentInfo where orderId = ?
+                PaymentInfo paymentInfo2 = paymentService.getPaymentInfo(paymentInfoQuery);
+                // 主动 查询支付结果 PaymentInfo 对象 中才会有out_trade_no
+                boolean flag = paymentService.checkPayment(paymentInfo2);*/
                 return "success";
             }else {
                 return "fail";
@@ -184,7 +204,6 @@ public class PaymentController {
         boolean flag = paymentService.checkPayment(paymentInfo);
         return ""+flag;
     }
-
 
 
 }

@@ -30,6 +30,21 @@ public class CartInfo implements Serializable{
     @Transient
     String isChecked="0";
 
+    @Override
+    public String toString() {
+        return "CartInfo{" +
+                "id='" + id + '\'' +
+                ", userId='" + userId + '\'' +
+                ", skuId='" + skuId + '\'' +
+                ", cartPrice=" + cartPrice +
+                ", skuNum=" + skuNum +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", skuName='" + skuName + '\'' +
+                ", skuPrice=" + skuPrice +
+                ", isChecked='" + isChecked + '\'' +
+                '}';
+    }
+
     public String getId() {
         return id;
     }

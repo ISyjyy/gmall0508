@@ -109,7 +109,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int updateUserInfo(UserInfo userInfo) {
-        return  userMapper.updateByPrimaryKey(userInfo);
+       return userMapper.updateByPrimaryKeySelective(userInfo);
 
+    }
+
+    @Override
+    public int addUserAddress(UserAddress userAddress) {
+        return userAddressMapper.insert(userAddress);
+    }
+
+    @Override
+    public List<UserAddress> queryUserAddress(UserAddress userAddress) {
+        return  userAddressMapper.select(userAddress);
+
+    }
+
+    @Override
+    public int delUserAddress(String id) {
+        return userAddressMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public int upUserPassword(UserInfo userInfo) {
+        return  userMapper.updateByPrimaryKeySelective(userInfo);
     }
 }

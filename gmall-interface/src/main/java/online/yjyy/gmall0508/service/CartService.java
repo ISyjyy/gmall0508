@@ -44,4 +44,6 @@ public interface CartService {
     List<CartInfo> getCartCheckedList(String userId);
 //重新加载数据
     List<CartInfo> loadCartCache(String userId);
+//根据skuId删除
+    int delCartItrm(CartInfo cartInfo,String userId);
 }

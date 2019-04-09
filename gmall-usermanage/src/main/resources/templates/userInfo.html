@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Expires-Type" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>账户信息</title>
+    <link type="text/css" rel="stylesheet"
+          href="//misc.360buyimg.com/jdf/1.0.0/unit/??ui-base/5.0.0/ui-base.css,shortcut/5.0.0/shortcut.css,global-header/1.0.0/global-header.css,myjd/5.0.0/myjd.css,nav/2.0.0/nav.css,shoppingcart/2.0.0/shoppingcart.css,global-footer/5.0.0/global-footer.css,service/5.0.0/service.css,basePatch/1.0.0/basePatch.css">
+    <script type="text/javascript"
+            src="//misc.360buyimg.com/jdf/1.0.0/unit/??base/5.0.0/base.js,basePatch/1.0.0/basePatch.js"></script>
+    <link rel="stylesheet" type="text/css" href="//misc.360buyimg.com/user/myjd-2015/css/myjd.info.css" media="all">
+    <link type="text/css" rel="stylesheet" href="//misc.360buyimg.com/user/myjd-2015/widget/??common/common.css"
+          source="widget">
+    <script type="text/javascript"
+            src="//misc.360buyimg.com/jdf/??lib/jquery-1.6.4.js,1.0.0/unit/libPath/1.0.0/libPath.js"></script>
+    <script type="text/javascript" async="" src="//nfa.jd.com/loadFa.js?aid=2_959_6296-2_959_6297"></script>
+
+</head>
+<body myjd="_MYJD_info" menuid="set">
+<div id="nav">
+    <nav>
+        <div class="logo">
+            <img src="./img/logo2018.gif" alt="" style="padding-left: 100px">
+        </div>
+        <div class="myjd">
+        </div>
+        <ul class="nav_ul" style="">
+        </ul>
+        <div style="clear:both;"></div>
+    </nav>
+
+</div>
+<!--shortcut start-->
+<div id="o-header-2013">
+    <div id="header-2013" style="display:none;"></div>
+</div>
+
+<!--container start-->
+
+<div id="container">
+    <div class="w">
+        <div id="content">
+            <div id="sub">
+                <div id="menu">
+                    <dl class="fore1">
+                        <dt id="_MYJD_setting">设置</dt>
+                        <dd class="fore1_1 curr" id="_MYJD_info">
+                            <a clstag="homepage|keycount|home2013|Homeyser" href="/queryUserInfo.do" target="_self">个人信息</a>
+                        </dd>
+                        <dd class="fore1_2" id="_MYJD_safe">
+                            <a clstag="homepage|keycount|home2013|Homesafe" href="userAddress"
+                               target="_self">收货地址</a>
+                        </dd>
+                        <dd class="fore1_2_1" id="_MYJD_wdcm">
+                            <a clstag="homepage|keycount|home2013|Homewdcm"
+                               href="userPassword" target="_self">我的密码</a>
+                        </dd>
+                        <dd class="fore1_3" id="_MYJD_accbinde">
+                            <a clstag="homepage|keycount|home2013|Homezhbd"  href="#"
+                               target="_self">账号绑定</a>
+                        </dd>
+
+                        <dd class="fore1_5" id="_MYJD_comments">
+                            <a clstag="homepage|keycount|home2013|homeadd"
+                               href="#" target="_self">账户安全</a>
+                        </dd>
+                        <dd class="fore1_6" id="_MYJD_yyrxx">
+                            <a clstag="pageclick|keycount|home_201804231|3" href="#"
+                               target="_self">健康档案</a>
+                        </dd>
+                        <dd class="fore1_7" id="_MYJD_share">
+                            <a clstag="homepage|keycount|home2013|Homeshare"  href="#"
+                               target="_self">分享绑定</a>
+                        </dd>
+                        <dd class="fore1_8" id="_MYJD_rss">
+                            <a clstag="homepage|keycount|home2013|Homeedm"  href="#"
+                               target="_self">邮件订阅</a>
+                        </dd>
+
+                        <dd class="fore1_10" id="_MYJD_app">
+                            <a clstag="homepage|keycount|home2013|Homeedm"  href="#"
+                               target="_blank">应用授权</a>
+                        </dd>
+                        <dd class="fore1_11" id="_MYJD_pay">
+                            <a clstag="homepage|keycount|home2013|Homequick"
+                               href="#" target="_blank">快捷支付</a>
+                        </dd>
+                        <dd class="fore1_12" id="_MYJD_zpzz">
+                            <a clstag="homepage|keycount|home2013|Homezpzz"
+                               href="#" target="_self">增票资质</a>
+                        </dd>
+                        <dd class="fore1_13" id="_MYJD_qyfp">
+                            <a clstag="homepage|keycount|home2013|Homeqyfp"  href="#"
+                               target="_self">企业发票</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div id="main">
+                <div class="mod-main">
+                    <div class="mt">
+                        <ul class="extra-l">
+                            <li class="fore-1"><a class="curr" href="#">基本信息</a></li>
+                            <li class="fore-2"><a href="#">头像照片</a></li>
+                            <li class="fore-3"><a href="#">更多个人信息</a></li>
+                        </ul>
+                    </div>
+                    <div class="mc">
+
+                        <div class="user-set userset-lcol">
+                            <div class="form">
+                  <form  id="userInfoForm" action="./updateUserInfo" method="post">
+                                <div class="item">
+                                    <span class="label">用户名：</span>
+                                    <div class="fl">
+                                        <div th:text="${user.loginName}"></div>
+                                    </div>
+                                </div>
+                                <div class="item" id="aliasArea">
+                                    <span class="label"><em>*</em>登录名：</span>
+                                    <div class="fl" id="aliasBefore">
+                                      <div th:text="${user.loginName}"></div>
+                                        <input type="hidden" id="userId" class="userId" th:value="${user.id}">
+                                        <div class="clr"></div>
+                                        <div class="prompt-06"><span id="aliasNameBefore_msg"></span></div>
+                                    </div>
+                                    <div class="fl" id="aliasAfter" style="display: none">
+                                        <div class="clr"></div>
+                                        <div class="prompt-06"><span id="aliasName_msg"></span></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="item">
+                                    <span class="label"><em>*</em>昵称：</span>
+                                    <div class="fl">
+                                        <input clstag="homepage|keycount|home2013|infoname" type="text" class="nickName"
+                                               maxlength="20" id="nickName"  th:value="${user.nickName}">
+                                        <div class="clr"></div>
+                                        <div class="prompt-06"><span id="nickName_msg"></span></div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <span class="label">性别：</span>
+                                    <div class="fl" clstag="homepage|keycount|home2013|infoGender">
+                                        <input type="radio" name="sex" class="jdradio" value="1" th:checked="${user.sex}=='1'?'true':'false'"><label
+                                            class="mr10">男</label>
+                                        <input type="radio" name="sex" class="jdradio" value="2" th:checked="${user.sex}=='2'?'true':'false'"><label
+                                            class="mr10">女</label>
+                                        <input type="radio" name="sex" class="jdradio" value="0" th:checked="${user.sex}=='0'?'true':'false'"><label
+                                            class="mr10">保密</label>
+                                    </div>
+                                </div>
+                          <!--      <div class="item" clstag="homepage|keycount|home2013|infoBirthday">
+                                    <span class="label">生日：</span>
+                                    <div class="fl birthday-info">
+                                        <select name="" class="selt selt1" id="birthdayYear">
+                                            <option value="0" selected="selected">请选择：</option>
+                                            <option value="10后">10后</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="00后">00后</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="90后">90后</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1995">1995</option>
+                                            <option value="1994">1994</option>
+                                            <option value="1993">1993</option>
+                                            <option value="1992">1992</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1990">1990</option>
+                                            <option value="80后">80后</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1980">1980</option>
+                                            <option value="70后">70后</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1970">1970</option>
+                                            <option value="60后">60后</option>
+                                            <option value="1969">1969</option>
+                                            <option value="1968">1968</option>
+                                            <option value="1967">1967</option>
+                                            <option value="1966">1966</option>
+                                            <option value="1965">1965</option>
+                                            <option value="1964">1964</option>
+                                            <option value="1963">1963</option>
+                                            <option value="1962">1962</option>
+                                            <option value="1961">1961</option>
+                                            <option value="1960">1960</option>
+                                            <option value="50后">50后</option>
+                                            <option value="1959">1959</option>
+                                            <option value="1958">1958</option>
+                                            <option value="1957">1957</option>
+                                            <option value="1956">1956</option>
+                                            <option value="1955">1955</option>
+                                            <option value="1954">1954</option>
+                                            <option value="1953">1953</option>
+                                            <option value="1952">1952</option>
+                                            <option value="1951">1951</option>
+                                            <option value="1950">1950</option>
+                                            <option value="40后">40后</option>
+                                            <option value="1949">1949</option>
+                                            <option value="1948">1948</option>
+                                            <option value="1947">1947</option>
+                                            <option value="1946">1946</option>
+                                            <option value="1945">1945</option>
+                                            <option value="1944">1944</option>
+                                            <option value="1943">1943</option>
+                                            <option value="1942">1942</option>
+                                            <option value="1941">1941</option>
+                                            <option value="1940">1940</option>
+                                            <option value="30后">30后</option>
+                                            <option value="1939">1939</option>
+                                            <option value="1938">1938</option>
+                                            <option value="1937">1937</option>
+                                            <option value="1936">1936</option>
+                                            <option value="1935">1935</option>
+                                            <option value="1934">1934</option>
+                                            <option value="1933">1933</option>
+                                            <option value="1932">1932</option>
+                                            <option value="1931">1931</option>
+                                            <option value="1930">1930</option>
+                                        </select>
+                                        <label class="ml5 mr5">年</label>
+                                        <select name="" class="selt selt1" id="birthdayMonth">
+                                            <option value="0" selected="selected">请选择：</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <label class="ml5 mr5">月</label>
+                                        <select name="" class="selt selt1" id="birthdayDay">
+                                            <option value="0" selected="selected">请选择：</option>
+                                        </select>
+                                        <label class="ml5 mr5">日</label>
+                                    </div>
+                                </div>-->
+                                <!--<div class="item">
+                                    <span class="label">密码：</span>
+                                    <input type="password" id="passwd" class="passwd" placeholder="改密码时填写..">
+                                </div>-->
+                                <div class="item">
+                                    <span class="label">邮箱：</span>
+                                    <input type="text" id="email" class="email" th:value="${user.email}">
+                                </div>
+                                <div class="item">
+                                    <span class="label">手机号：</span>
+                                    <input type="text" id="phoneNum" class="phoneNum" th:value="${user.phoneNum}">
+                                </div>
+                                <div class="item">
+                                    <span class="label">&nbsp;</span>
+                                    <div class="fl">
+                                        <button type="button" onclick="updateUserInfo()">提交</button>
+                                        <button type="button" onclick="return_index()">返回</button>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="user-info">
+                            <div class="u-pic">
+                                <img alt="用户头像" src="//i.jd.com/commons/img/no-img_mid_.jpg">
+                                <div class="mask"></div>
+                                <div class="face-link-box"></div>
+                                <a href="#" class="face-link">修改头像</a>
+                            </div>
+                            <div class="info-m">
+                                <div style="display: inline-block"><b>用户名：</b></div>
+
+                                <div style="display: inline-block" th:text="${user.nickName}">dd</div>
+                                <div class="u-level" >
+                                        <span class="rank jxz">
+										<s></s><a href="#" target="_blank" title="6932">谷享值6932</a>
+									    </span>
+
+                                </div>
+                                <div clstag="pageclick|keycount|201602251|4">小白信用：<a href="#"
+                                                                                     target="_blank">86.0 </a></div>
+                                <div style="display: inline-block">会员类型：</div>
+                                <div style="display: inline-block" >普通会员</div>
+                            </div>
+                        </div>
+                        <div class="fr ac" style="width:280px;">
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//misc.360buyimg.com/user/myjd-2015/widget/??common/common.js"
+        source="widget"></script>
+<!--
+<script type="text/javascript" src="/js/updatePetName.js"></script>
+-->
+<script type="text/javascript" >
+    function return_index() {
+        window.location.href="http://www.gmall.com/index.html";
+    }
+    // 提交用户基本信息修改
+    function updateUserInfo() {
+        var userId=$("#userId").val();
+        var nickName=$("#nickName").val();
+        var sex=$("input[name=sex]:checked").val();
+      //  var passwd=$("#passwd").val();
+        var email=$("#email").val();
+        var phoneNum=$("#phoneNum").val();
+        $.ajax({
+            contentType:"application/json",
+            type : "post",
+            url : "updateUserInfo",
+            data :JSON.stringify({
+                "id":userId,
+                "nickName":nickName,
+                "sex":sex,
+                "email":email,
+                "phoneNum":phoneNum,
+            }),
+            success : function(data) {
+                if (data=="success") {
+                  alert("更新成功!")
+                    window.location.href="http://www.gmall.com/queryUserInfo.do";
+                }
+            },
+            error:function () {
+                alert("更新失败!")
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

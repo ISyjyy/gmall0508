@@ -21,4 +21,6 @@ public interface WareSkuMapper extends Mapper<WareSku> {
     public int  deliveryStock(WareSku wareSku);
 
     public List<WareSku> selectWareSkuAll();
+
+    public WareSku selectWareSkuBySkuId(String skuId);
 }

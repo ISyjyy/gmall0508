@@ -1,12 +1,13 @@
 package online.yjyy.gware.bean;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @param
  * @return
  */
-public class WareSku {
+public class WareSku implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column

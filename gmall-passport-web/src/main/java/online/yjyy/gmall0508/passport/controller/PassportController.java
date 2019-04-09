@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Controller
-public class PassportController {
+public class    PassportController {
 
     @Value("${token.key}")
     private String signKey;

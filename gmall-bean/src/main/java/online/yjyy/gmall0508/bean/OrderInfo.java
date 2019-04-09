@@ -69,6 +69,16 @@ public class OrderInfo implements Serializable {
 
     @Column
     private String outTradeNo;
+    @Column
+    private String imgUrl;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public void sumTotalAmount(){
         BigDecimal totalAmount=new BigDecimal("0");
@@ -220,5 +230,30 @@ public class OrderInfo implements Serializable {
 
     public void setOutTradeNo(String outTradeNo) {
         this.outTradeNo = outTradeNo;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderInfo{" +
+                "id='" + id + '\'' +
+                ", consignee='" + consignee + '\'' +
+                ", consigneeTel='" + consigneeTel + '\'' +
+                ", totalAmount=" + totalAmount +
+                ", orderStatus=" + orderStatus +
+                ", processStatus=" + processStatus +
+                ", userId='" + userId + '\'' +
+                ", paymentWay=" + paymentWay +
+                ", expireTime=" + expireTime +
+                ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", orderComment='" + orderComment + '\'' +
+                ", createTime=" + createTime +
+                ", parentOrderId='" + parentOrderId + '\'' +
+                ", trackingNo='" + trackingNo + '\'' +
+                ", orderDetailList=" + orderDetailList +
+                ", orderSubList=" + orderSubList +
+                ", wareId='" + wareId + '\'' +
+                ", outTradeNo='" + outTradeNo + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                '}';
     }
 }

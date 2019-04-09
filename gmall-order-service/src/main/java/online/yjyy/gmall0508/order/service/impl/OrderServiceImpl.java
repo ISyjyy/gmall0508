@@ -268,6 +268,21 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public List<OrderInfo> queryOrderList(OrderInfo orderInfo) {
+        return null;
+    }
+
+    @Override
+    public List queryOrderMap(Long userId) {
+        return null;
+    }
+
+    @Override
+    public int delOrderInfoById(String orderId) {
+        return 0;
+    }
+
+    @Override
     public List<OrderInfo> getExpiredOrderList() {
         // 过期时间《当前时间
         Example example = new Example(OrderInfo.class);
