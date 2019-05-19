@@ -9,19 +9,19 @@ import online.yjyy.gmall0508.config.RedisUtil;
 import online.yjyy.gmall0508.config.WebConst;
 import online.yjyy.gmall0508.service.UserService;
 import online.yjyy.gmall0508.usermanage.config.JwtUtil;
+import online.yjyy.gmall0508.usermanage.config.MessageUtil;
 import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.DigestUtils;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +37,8 @@ public class ManageController {
     private UserService userService;
     @Autowired
     private RedisUtil redisUtil;
+
+
     @RequestMapping("findAll")
     @ResponseBody
     public List<UserInfo> findAll(){
@@ -143,6 +145,7 @@ public class ManageController {
         System.out.println(userInfo.getSex());
         System.out.println(userInfo.getPhoneNum());
         System.out.println(userInfo.getEmail());*/
+
        int ret = userService.updateUserInfo(userInfo);
         if(ret<0) {
             return "fail";
@@ -151,10 +154,26 @@ public class ManageController {
         HashMap<String, Object> map = new HashMap<>();
         map.put("userId",userInfo.getId());
         map.put("nickName",userInfo.getNickName());
+        request.setAttribute("nickName",userInfo.getNickName());
         // 生成token
         String token = online.yjyy.gmall0508.passport.config.JwtUtil.encode(signKey, map, salt);
         CookieUtil.setCookie(request,response,"token",token,WebConst.COOKIE_MAXAGE,false);
         return "success";
+    }
+
+    @RequestMapping(value = "sendMessageNum")
+    @ResponseBody
+    public String getMessageNum(@RequestParam("phoneNum") String phoneNum, HttpServletRequest request, HttpSession session) {
+        String code="";
+        if(phoneNum!=null) {
+            code = MessageUtil.sendMessage(phoneNum);
+            Jedis jedis = redisUtil.getJedis();
+            String userKey = userKey_prefix + phoneNum + userinfoKey_suffix;
+            jedis.set(userKey,code);
+            jedis.expire(userKey,3*60);
+            jedis.close();
+        }
+        return code;
     }
 
 }

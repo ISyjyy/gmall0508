@@ -116,6 +116,7 @@ public class PaymentController {
     // 测试同步回调
     @RequestMapping("/alipay/callback/return")
     public String callbackReturn(HttpServletRequest request){
+        //发送付款成功消息
         HttpSession session=request.getSession();
         String orderId = (String) session.getAttribute("orderId");
         PaymentInfo paymentInfoQuery = new PaymentInfo();
@@ -162,15 +163,6 @@ public class PaymentController {
                 paymentService.updatePaymentInfo(paymentInfo);
                 // paymentService.updatePaymentInfoByOutTradeNo(out_trade_no,paymentInfo);
                 paymentService.sendPaymentResult(paymentInfo,"success");
-            /* //查看是否支付成功
-                HttpSession session=request.getSession();
-                String orderId = (String) session.getAttribute("orderId");
-               // PaymentInfo paymentInfoQuery = new PaymentInfo();
-                paymentInfoQuery.setOrderId(orderId);
-                // select * from paymentInfo where orderId = ?
-                PaymentInfo paymentInfo2 = paymentService.getPaymentInfo(paymentInfoQuery);
-                // 主动 查询支付结果 PaymentInfo 对象 中才会有out_trade_no
-                boolean flag = paymentService.checkPayment(paymentInfo2);*/
                 return "success";
             }else {
                 return "fail";

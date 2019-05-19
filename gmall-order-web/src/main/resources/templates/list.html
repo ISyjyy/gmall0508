@@ -128,8 +128,15 @@
               </td>
             <td     rowspan="2">
               <ul>
-                <li style="color:#71B247;"  >等待收货</li>
-                <li     style="margin:4px 0;" class="hide"><i class="table_i2"></i>跟踪<i class="table_i3"></i>
+              <li style="color:#71B247;" th:text="${orderInfo.orderStatus}"></li>
+              <!--  <li style="color:#71B247;" th:text="${orderInfo.orderStatus} eq 'UNPAID'? '未付款':''"></li>
+                <li style="color:#71B247;" th:text="${orderInfo.orderStatus} eq 'DELEVERED'? '等待收货':''"></li>
+                <li style="color:#71B247;" th:text="${orderInfo.orderStatus} eq 'CLOSED'? '已关闭':''"></li>-->
+           <!--    <li style="color:#71B247;" th:if="${orderInfo.orderStatus }eq 'UNPAID'" th:text="未付款"></li>
+                <li style="color:#71B247;" th:if="${orderInfo.orderStatus }eq'DELEVERED'" th:text="等待收货"></li>
+                <li style="color:#71B247;" th:if="${orderInfo.orderStatus } eq 'CLOSED'" th:text="已关闭"></li>
+            <!--    <li  style="color:#71B247;" th:text="${orderInfo.orderStatus}" >等待收货</li>-->
+                <li     style="margin:4px 0;" class="hide" ><i class="table_i2"></i>跟踪<i class="table_i3"></i>
                   <div class="hi">
                     <div class="p-tit" >
                       普通快递   运单号:390085324974

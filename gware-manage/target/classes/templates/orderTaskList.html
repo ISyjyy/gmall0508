@@ -5,79 +5,25 @@
 	<title>工作单</title>
 
 <!-- ${sxt } 表示取得项目名称的跟路径-->
-<script type="text/javascript" src="easyui/jquery.min.js"></script>
-<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="easyui/easyloader.js"></script>
-<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+<script type="text/javascript" src="/../easyui/jquery.min.js"></script>
+<script type="text/javascript" src="/../easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/../easyui/easyloader.js"></script>
+<link rel="stylesheet" type="text/css" href="/../easyui/themes/icon.css">
 <link rel="stylesheet" type="text/css"
-	href="easyui/themes/default/easyui.css">
-<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+	href="/../easyui/themes/default/easyui.css">
+<script type="text/javascript" src="/../easyui/locale/easyui-lang-zh_CN.js"></script>
 </head>
-<script type="text/javascript">
-	$(function() {
-		$('#dg').datagrid({
-			// url:表示请求数据地址  写成controller中的路径。取数据的方式都以ajax方式来请求的。
-			// field 绑定的是属性名称
-			/* url : '${sxt}/findAll', */
-			url : '/taskList',
-			columns : [ [
-                {
-                    field : 'id',
-                    title : '工作单号',
-                    width : 100
-           }, {
-				field : 'orderId',
-				title : '订单号',
-				width : 100
-			},
-             {
-                 field : 'wareId',
-                 title : '仓库编号',
-                 width : 100
-                },
-               {
-				field : 'orderBody',
-				title : '货物描述',
-				width : 100
-			}, {
-				field : 'consignee',
-				title : '收货人',
-				width : 100
-			},{
-                 field : 'deliveryAddress',
-                 title : '收货地址',
-                 width : 100
-             },{
-                  field : 'trackingNo',
-                  title : '运单号',
-                  width : 100
-                },{
-                    field : 'taskStatus',
-                    title : '状态',
-                    width : 100
-                } ] ],
-			toolbar : '#tb',
-			singleSelect : true,
-			pagination : true,
-			rownumbers : true
-		});
-
-	})
-</script>
 <body>
 	<!-- 用来定义工具栏 -->
-	<div id="tb">
+	<!--<div id="tb">
 		<button class="easyui-linkbutton" data-options="iconCls:'icon-edit'"
 			onclick="edit()">发货</button>
 
-	</div>
+	</div>-->
 	<!-- 设置添加，编辑窗口 -->
-	<div id="dlg" class="easyui-dialog"
+<div id="dlg" class="easyui-dialog"
 		style="width: 400px; height: 200px;" closed="true" buttons="#bb"
 		data-options="iconCls:'icon-save',resizable:true,modal:true">
-		<!-- 将数据提交到后台 
-  	  	form 少了一个action。
-  	  -->
 		<div>用户信息</div>
 		<form id="fm" method="post">
 			<div>
@@ -88,11 +34,9 @@
 				<label  >密 码:</label> <input class="easyui-validatebox"
 					type="password" name="pwd" data-options="required:true" />
 			</div>
-			<input>
 		</form>
 	</div>
 	<!-- 保存，关闭 -->
-	</div>
 	<div id="bb">
 		<a href="#" class="easyui-linkbutton" onclick="saveUser()">保存</a> <a
 			href="#" class="easyui-linkbutton"
@@ -100,9 +44,62 @@
 	</div>
 	<!-- 显示数据 -->
 	<table id="dg"></table>
-
 </body>
 <script type="text/javascript">
+    $('#dg').datagrid({
+        // url:表示请求数据地址  写成controller中的路径。取数据的方式都以ajax方式来请求的。
+        // field 绑定的是属性名称
+        /* url : '${sxt}/findAll', */
+        url : 'taskList',
+        columns : [[
+            {
+                field : 'id',
+                title : '工作单号',
+                width : 100
+            },
+            {
+                field : 'orderId',
+                title : '订单号',
+                width : 100
+            },
+            {
+                field : 'wareId',
+                title : '仓库编号',
+                width : 100
+            },
+            {
+                field : 'orderBody',
+                title : '货物描述',
+                width : 100
+            },
+            {
+                field : 'consignee',
+                title : '收货人',
+                width : 100
+            },
+            {
+                field : 'deliveryAddress',
+                title : '收货地址',
+                width : 100
+            },
+            {
+                field : 'trackingNo',
+                title : '运单号',
+                width : 100
+            },
+            {
+                field : 'taskStatus',
+                title : '状态',
+                width : 100
+            } ] ],
+        toolbar : '#tb',
+        singleSelect : true,
+        pagination : true,
+        rownumbers : true
+    });
+
+
+
 	function add() {
 		// 点击的时候，要对话框出现
 		$("#dlg").dialog('open').dialog('setTitle', '添加用户')
@@ -141,7 +138,7 @@
 		// 将数据加载到对话框中
 		$('#fm').form('load',row)	// 读取表单的URL
 		// 提交的url地址！
-		url='/delivered?id='+row.id
+		url='/delivery?id='+row.id
 	}
 	function del() {
 		// 调用getSelected方法。
@@ -170,6 +167,7 @@
 		});
 
 	}
+
 </script>
 
 

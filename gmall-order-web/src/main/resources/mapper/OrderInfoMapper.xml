@@ -11,7 +11,7 @@
     </resultMap>
     <select id="selectOrderInfoList" resultMap="orderInfoMap">
    select oi.id,oi.consignee,oi.total_amount,oi.payment_way,oi.order_comment,oi.user_id,oi.img_url,
-       oi.out_trade_no,od.id order_detail_id ,od.sku_name
+       oi.out_trade_no,od.id order_detail_id ,od.sku_name,oi.order_status
  FROM order_info oi inner join order_detail od on oi.id=od.order_id
  where oi.user_id=#{user_id}
     </select>

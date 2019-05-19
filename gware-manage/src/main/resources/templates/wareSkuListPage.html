@@ -30,7 +30,7 @@
         <div style="margin-bottom:5px">
             <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addWareSku()">添加</a>
             <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editWareSku()">编辑</a>
-            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
+            <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="delWareSku()">删除</a>
         </div>
         <div>
 
@@ -46,6 +46,7 @@
     <form id="wareSkuForm">
         <br/>
         <label>库存单元名称:</label><br/>
+        <div style=" text-align: center"> <input type="hidden" id="aid" name="aid" class="easyui-textbox" data-options="" style="left:40px;width:200px"/></div>
         <div style=" text-align: center"> <input  id="stockName" name="stockName" class="easyui-textbox" data-options="" style="left:40px;width:200px"/></div>
         <br/>
         <label>库存数量:</label><br/>
@@ -55,7 +56,7 @@
             <div style=" text-align: center"> <input  id="skuId" name="skuId" class="easyui-textbox" data-options="" style="width:200px"/></div>
         <br/>
         <label>仓库:</label><br/>
-                <div style=" text-align: center"><select name="warehouse" id="warehouseId"  class="easyui-combobox" data-options="valueField:'id',textField:'name',method:'get',url:'wareInfoList'" style="width:200px">  </select></div>
+                <div style=" text-align: center"><select name="warehouseId" id="warehouseId"  class="easyui-combobox" data-options="valueField:'id',textField:'name',method:'get',url:'wareInfoList'" style="width:200px">  </select></div>
 
 
     </form>
@@ -64,35 +65,42 @@
 
 <div id="bb">
     <a href="#" class="easyui-linkbutton" onclick="saveWareSku()">保存</a>
-    <a href="#" class="easyui-linkbutton">关闭</a>
+    <a href="#" class="easyui-linkbutton" onclick="wareFormclose()">关闭</a>
 </div>
 
 </body>
 <script language="javascript">
     /*<![CDATA[*/
     function saveWareSku(){
+        var aid=$("#aid").val();
         var formJson ={} ;
         //把表格中的数据循环组合成json
         formJson['warehouseId']=$('#warehouseId').combobox("getValue");
         formJson["stock"]=$("#stock").val();
         formJson["stockName"]=$("#stockName").val();
         formJson["skuId"]=$("#skuId").val();
-
+         debugger
         //ajax 保存到后台
-        $.post("saveWareSku",formJson,function(data){
-            $("#dlg").dialog("close");
-            $("#dg").datagrid("reload");
-        });
+        if(aid==null||aid==""||aid==undefined) {
+            $.post("saveWareSku", formJson, function (data) {
+                $("#dlg").dialog("close");
+                $("#dg").datagrid("reload");
+            });
+        }else{
+            formJson["id"]=$("#aid").val();
+            $.post("updateWareSku", formJson, function (data) {
+                $("#dlg").dialog("close");
+                $("#dg").datagrid("reload");
+            });
+
+        }
     }
 
-
-
-
     function addWareSku(){
-
         //弹出框
         $("#dlg").dialog("open");
         //进系统前先清空
+        $("#aid").textbox('clear');
         $("#stock").textbox('clear');
         $("#stockName").textbox('clear');
         $("#skuId").textbox('clear');
@@ -100,9 +108,37 @@
 
     }
 
+    function editWareSku(){
+        //弹出框
+        $("#dlg").dialog("open");
+        var attrInfoRow = $("#dg").datagrid("getSelected");
 
+       // $("#dlg").datagrid({url: 'getAttrValueList?attrId='+attrInfoRow.id});
+        $("#aid").textbox('setValue',attrInfoRow.id);
+        $("#stock").textbox('setValue',attrInfoRow.stock);
+        $("#stockName").textbox('setValue',attrInfoRow.stockName);
+        $("#skuId").textbox('setValue',attrInfoRow.skuId);
+      /* $.post("getWareInfo?id="+attrInfoRow.id, function (data) {
+            $('#warehouseId').textbox('setValue',data.name);
+        });*/
+        $('#warehouseId').textbox('setValue',attrInfoRow.warehouseId);
+       /* debugger
+        $('#warehouseId').val(attrInfoRow.warehouseId);*/
+    }
 
+    function delWareSku(){
+        //弹出框
+    alert("确认要删除么?");
+        var attrInfoRow = $("#dg").datagrid("getSelected");
+        $.post("delWareSku?id="+attrInfoRow.id,function(data){
+            $("#dlg").dialog("close");
+            $("#dg").datagrid("reload");
+        });
+    }
 
+function wareFormclose() {
+    $("#dlg").dialog("close");
+}
 
 
 

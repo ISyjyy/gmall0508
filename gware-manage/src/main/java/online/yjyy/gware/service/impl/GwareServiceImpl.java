@@ -92,6 +92,22 @@ public class GwareServiceImpl implements GwareService {
         return wareSku1;
     }
 
+    @Override
+    public int delWareSku(WareSku wareSku) {
+        return   wareSkuMapper.deleteByPrimaryKey(wareSku);
+
+    }
+
+    @Override
+    public void updateWareSku(WareSku wareSku) {
+        wareSkuMapper.updateByPrimaryKey(wareSku);
+    }
+
+    @Override
+    public WareInfo getWareInfo(WareInfo wareInfo) {
+        return   wareInfoMapper.selectByPrimaryKey(wareInfo);
+    }
+
 
     public void addWareInfo(){
         WareInfo wareInfo =new WareInfo();

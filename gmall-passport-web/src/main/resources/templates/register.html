@@ -32,8 +32,8 @@
 				</div>
  
 				<div class="si_bom1 tab" style="display: block;">
-					<div  class="error" >
-					请输入用户名和密码!
+					<div  class="error" style="width: 205px;height: 20px" >
+					请输入用户名、密码、电话号码和邮箱!
 				</div>
 					<form id="registerForm" action="./registerUser" method="post">
 					<ul>
@@ -48,11 +48,11 @@
 						</li>
 						<li>
 							<img src="/img/user_06.png" class="err_img2"/>
-							<input type="number" name="phoneNum" placeholder=" 手机号" class="password"/>
+							<input type="text" name="phoneNum" placeholder=" 手机号" class="phoneNum"/>
 						</li>
 						<li>
 							<img src="/img/user_06.png" class="err_img2"/>
-							<input type="email" name="email" placeholder=" 邮箱" class="password"/>
+							<input type="email" name="email" placeholder=" 邮箱" class="email"/>
 						</li>
 						<li class="ent"><button id="btn2" type="button" class="btn2"><a class="a">注 &nbsp; &nbsp;册</a></button></li>
 					</ul>
@@ -76,14 +76,35 @@
 			var user=document.getElementsByClassName('user')[0];
 			var pass=document.getElementsByClassName('password')[0];
             var phoneNum=document.getElementsByClassName('phoneNum')[0];
+            var Ema=document.getElementsByClassName('email')[0];
 
 			var err=document.getElementsByClassName('error')[0];
 
 			var err_img1=document.getElementsByClassName('err_img1')[0];
 			var err_img2=document.getElementsByClassName('err_img2')[0];
-		 
+
 			btn2.onclick=function(){
-				if(user.value == '' || pass.value ==''){
+                var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+	 			if(!re.test(Ema.value)){
+                  //  alert("邮箱格式有误，请重填!");
+                    $(".error").text("邮箱格式有误，请重填!");
+                    $(".error").show();
+                    return ;
+				}
+                var uPattern = /^[a-zA-Z0-9_-]{4,16}$/;
+	 			if(!uPattern.test(user.value)){
+                    $(".error").text("用户名，4到16位(字母，数字，无特殊字符)");
+                    $(".error").show();
+                    return ;
+				}
+
+                if(!(/^1[34578]\d{9}$/.test(phoneNum.value))){
+                   // alert("手机号码格式有误，请重填!");
+                    $(".error").text("手机号码格式有误，请重填!");
+                    $(".error").show();
+                    return ;
+                }
+				if(user.value == '' || pass.value ==''||phoneNum.value==''||Ema.value==''){
 					err.style.display='block';
 					user.style.border='1px solid red';
 					pass.style.border='1px solid red';
@@ -99,15 +120,27 @@
 					console.log($("#registerForm").serialize());
 					/*ajax */
                     $.post("/registerUser",$("#registerForm").serialize(),function (data) {
-                    if(data&&data!='fail'){
+
+                    if(data&&data!='LoginFail'&&data!='PhoneFail'&&data!='EmailFail'){
                             alert("注册成功！");
                             window.location.href="index.html";
                             return ;
-                        }else{
-                            alert("注册失败!");
+                        }else if(data=='LoginFail'){
+                           // alert("注册失败!");
                              $(".error").text("用户名已被注册！");
                              $(".error").show();
                         }
+                    else if(data=='PhoneFail'){
+                        // alert("注册失败!");
+                        $(".error").text("电话号码已被使用！");
+                        $(".error").show();
+                    }
+                    else if(data=='EmailFail'){
+                        // alert("注册失败!");
+                        $(".error").text("邮箱号已被使用！");
+                        $(".error").show();
+                    }
+
                     }   );
                 }
 			 return;

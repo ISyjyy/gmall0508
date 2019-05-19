@@ -8,7 +8,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @MapperScan(basePackages = "online.yjyy.gmall0508.usermanage.*")//tk.mybatis.spring.annotation.MapperScan;
-@ComponentScan(basePackages = "online.yjyy.gmall0508")
+@ComponentScan(basePackages = "online.yjyy.gmall0508.*")
 public class GmallUsermanageApplication {
 
     public static void main(String[] args) {

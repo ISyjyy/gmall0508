@@ -20,6 +20,10 @@ public interface UserService {
     void addUserInfo(UserInfo userInfo);
 //查询用户名是否重复
     UserInfo queryUserInfo(String LoginName);
+    //查询手机号是否重复
+    UserInfo queryUserInfoByPhone(String phone);
+    //查询邮箱号是否重复
+    UserInfo queryUserInfoByEmail(String email);
     //id查询用户
     UserInfo queryUserInfoById(String userId);
   //更新用户信息
@@ -32,4 +36,6 @@ public interface UserService {
     int delUserAddress(String id);
 //更新用户密码
     int upUserPassword(UserInfo userInfo);
+//根据用户信息查询是否存在用户
+    UserInfo queryUserInfoByInfo(UserInfo userInfo);
 }

@@ -57,15 +57,17 @@ public class UserServiceImpl implements UserService {
         // 配一个用户对象
         UserInfo info = userMapper.selectOne(userInfo);
         // 登录成功之后，将用户登录信息放入redis 中
-
-        Jedis jedis = redisUtil.getJedis();
-        // 定义key  user:userId:info
-        String userKey = userKey_prefix+info.getId()+userinfoKey_suffix;
-        if (info!=null){
-            //设置过期时间
-            jedis.setex(userKey,userKey_timeOut, JSON.toJSONString(info));
-        }
-        return info;
+       if(info!=null) {
+       Jedis jedis = redisUtil.getJedis();
+      // 定义key  user:userId:info
+       String userKey = userKey_prefix + info.getId() + userinfoKey_suffix;
+       if (info != null) {
+        //设置过期时间
+        jedis.setex(userKey, userKey_timeOut, JSON.toJSONString(info));
+    }
+    return info;
+}
+return null;
     }
 
     @Override
@@ -97,9 +99,21 @@ public class UserServiceImpl implements UserService {
         UserInfo userInfo=new UserInfo();
         userInfo.setLoginName(loginName);
         return  userMapper.selectOne(userInfo);
-
-
     }
+    @Override
+    public UserInfo queryUserInfoByPhone(String Phone) {
+        UserInfo userInfo=new UserInfo();
+        userInfo.setPhoneNum(Phone);
+        return  userMapper.selectOne(userInfo);
+    }
+    @Override
+    public UserInfo queryUserInfoByEmail(String email) {
+        UserInfo userInfo=new UserInfo();
+        userInfo.setEmail(email);
+        return  userMapper.selectOne(userInfo);
+    }
+
+
 
     @Override
     public UserInfo queryUserInfoById(String userId) {
@@ -132,5 +146,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public int upUserPassword(UserInfo userInfo) {
         return  userMapper.updateByPrimaryKeySelective(userInfo);
+    }
+
+    @Override
+    public UserInfo queryUserInfoByInfo(UserInfo userInfo) {
+        return  userMapper.selectOne(userInfo);
     }
 }

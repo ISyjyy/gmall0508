@@ -1,5 +1,13 @@
 package online.yjyy.gmall0508.passport;
 
+import com.aliyuncs.CommonRequest;
+import com.aliyuncs.CommonResponse;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.IAcsClient;
+import com.aliyuncs.exceptions.ClientException;
+import com.aliyuncs.exceptions.ServerException;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.profile.DefaultProfile;
 import online.yjyy.gmall0508.passport.config.JwtUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,4 +47,32 @@ public class GmallPassportWebApplicationTests {
 //		{nickName=Administrator, userId=1001}
 
     }
+
+    @Test
+    public void message() {
+      /*  //测试短信发送
+        DefaultProfile profile = DefaultProfile.getProfile("default", "LTAIMzPZ96LdKqwf", "nZ6fBMnTnK2MkJIxdanbBGpN9uoZFG");
+        IAcsClient client = new DefaultAcsClient(profile);
+
+        CommonRequest request = new CommonRequest();
+        //request.setProtocol(ProtocolType.HTTPS);
+        request.setMethod(MethodType.POST);
+        request.setDomain("dysmsapi.aliyuncs.com");
+        request.setVersion("2017-05-25");
+        request.setAction("SendSms");
+        request.putQueryParameter("PhoneNumbers", "13457926297");
+        request.putQueryParameter("SignName", "谷粒谷粒");
+        request.putQueryParameter("TemplateCode", "SMS_165108795");
+        request.putQueryParameter("TemplateParam", "{\"code\":\"123456\"}");
+        try {
+            CommonResponse response = client.getCommonResponse(request);
+            System.out.println(response.getData());
+        } catch (ServerException e) {
+            e.printStackTrace();
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }*/
+
+    }
+
 }

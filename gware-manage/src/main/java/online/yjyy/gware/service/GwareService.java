@@ -39,4 +39,10 @@ public interface GwareService {
     public List<WareInfo> getWareInfoList();
 
    public WareSku queryStockBySkuId(String skuId);
+
+    int delWareSku(WareSku wareSku);
+
+    void updateWareSku(WareSku wareSku);
+
+    WareInfo getWareInfo(WareInfo wareInfo);
 }

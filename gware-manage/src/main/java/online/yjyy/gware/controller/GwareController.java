@@ -38,6 +38,10 @@ public class GwareController {
     public String wareSkuListPage(){
         return "wareSkuListPage";
     }
+    @RequestMapping("orderTaskList")
+    public String orderTaskList(){
+        return "orderTaskList";
+    }
 
     //查询库存数量
     @RequestMapping("queryStock")
@@ -95,12 +99,30 @@ public class GwareController {
     }
 
 
-
+    @RequestMapping(value = "validate")
+    @ResponseBody
+    public ResponseEntity<Void> validate(){
+        System.out.println("保存成功!");
+        return ResponseEntity.ok().build();
+    }
     @RequestMapping(value = "saveWareSku" ,method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<Void> addWareSku( WareSku wareSku){
          gwareService.addWareSku(wareSku);
          return ResponseEntity.ok().build();
+    }
+    @RequestMapping(value = "updateWareSku" ,method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Void> updateWareSku( WareSku wareSku){
+        gwareService.updateWareSku(wareSku);
+        return ResponseEntity.ok().build();
+    }
+    @RequestMapping(value = "delWareSku" ,method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseEntity<Void> delWareSku(WareSku wareSku,HttpServletRequest request){
+        wareSku.setId(request.getParameter("id"));
+        gwareService.delWareSku(wareSku);
+        return ResponseEntity.ok().build();
     }
 
 
@@ -116,6 +138,13 @@ public class GwareController {
     public List<WareInfo> getWareInfoList(){
         List<WareInfo> wareInfoList = gwareService.getWareInfoList();
         return wareInfoList;
+    }
+    @RequestMapping(value = "getWareInfo")
+    @ResponseBody
+    public WareInfo getWareInfo(HttpServletRequest request,WareInfo wareInfo){
+        wareInfo.setId( request.getParameter("id"));
+        return   gwareService.getWareInfo(wareInfo);
+
     }
 
 
@@ -137,10 +166,11 @@ public class GwareController {
     }
 
 
-    @RequestMapping(value="taskList",method = RequestMethod.GET)
+    @RequestMapping("taskList")
     @ResponseBody
     public ResponseEntity<String> getWareOrderTaskList(HttpServletRequest httpServletRequest){
-        List<WareOrderTask> wareOrderTaskList = gwareService.getWareOrderTaskList(null);
+        WareOrderTask wareOrderTask=new WareOrderTask();
+        List<WareOrderTask> wareOrderTaskList = gwareService.getWareOrderTaskList(wareOrderTask);
         SerializeConfig config = new SerializeConfig();
         config.configEnumAsJavaBean(TaskStatus.class);
         String jsonString = JSON.toJSONString(wareOrderTaskList);

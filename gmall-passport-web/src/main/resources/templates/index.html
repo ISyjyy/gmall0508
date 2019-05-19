@@ -33,7 +33,7 @@
 				</div>
  
 				<div class="si_bom1 tab" style="display: block;">
-					<div  class="error">
+					<div  class="error" style="width: 205px;height: 20px" >
 						请输入账户名和密码
 					</div>
 
@@ -50,7 +50,7 @@
 
 						</li>
 						<li class="bri">
-							<a href="">忘记密码</a>
+							<a href="findPassword">忘记密码</a>
 						</li>
 						<li class="ent"><button id="btn2" type="button" class="btn2"><a class="a">登 &nbsp; &nbsp;录</a></button></li>
 
@@ -58,13 +58,14 @@
 						<input type="hidden" id="originUrl" name="originUrl" th:value="${originUrl}"/>
 					</form>
 				</div>
+
 			<div class="si_out">
- 
 				<h5 class="rig">
 						<img src="/img/4de5019d2404d347897dee637895d02b_25.png"/>
 						<span><a href="register">立即注册</a></span>
 					</h5>
 			</div>
+
 			</div>
 		</div>
 
@@ -86,6 +87,10 @@
 			var err_img2=document.getElementsByClassName('err_img2')[0];
 		 
 			btn2.onclick=function(){
+             /*   if(!(/^1[34578]\d{9}$/.test(phoneNum.value))){
+                    alert("手机号码有误，请重填");
+                    return ;
+                }*/
 				if(user.value == '' || pass.value ==''){
 					err.style.display='block';
 					user.style.border='1px solid red';
@@ -95,7 +100,7 @@
 					err_img2.src='img/img22.png';
 				}else{
 					/*$("#loginForm").serialize() 获取表单中的所有元素值*/
-					alert($("#loginForm").serialize());
+				//	alert($("#loginForm").serialize());
 					console.log($("#loginForm").serialize());
 					/*ajax */
                     $.post("/login",$("#loginForm").serialize(),function (data) {
